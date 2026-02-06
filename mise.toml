@@ -1,2 +1,15 @@
+[tasks.check]
+run = "npm install"
+
+[tasks."build:lint"]
+run = "npm run lint"
+
+[tasks.build]
+description = "build all the things"
+depends = ["check"]
+run = [
+  "mise build:lint",
+]
+
 [tools]
 node = "24.13.0"
