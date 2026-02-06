@@ -1,3 +1,12 @@
+# Ambrose Patterson
+
+[
+![Build Checks](https://github.com/saramic/ambrose-patterson/actions/workflows/build-checks.yml/badge.svg)](https://github.com/saramic/ambrose-patterson/actions/workflows/build-checks.yml)
+
+https://ambrosepatterson.com.au/
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with
 [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
