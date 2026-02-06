@@ -4,11 +4,15 @@ run = "npm install"
 [tasks."build:lint"]
 run = "npm run lint"
 
+[tasks."build:format"]
+run = "npm run format:check"
+
 [tasks.build]
 description = "build all the things"
 depends = ["check"]
 run = [
   "mise build:lint",
+  "mise build:format",
 ]
 
 [tools]
