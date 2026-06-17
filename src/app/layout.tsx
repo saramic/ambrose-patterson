@@ -14,10 +14,43 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
 });
 
+const SITE_URL = "https://ambrosepatterson.com";
+const OG_TITLE = "Ambrose Patterson: His Life & Art";
+const OG_DESCRIPTION =
+  "The first authoritative monograph on the significant Australian-American modernist — from bohemian Paris at the fin de siècle to the Pacific Northwest. By Jane Alexander.";
+
 export const metadata: Metadata = {
-  title: "Ambrose Patterson: The Book About the Man - Coming Soon",
-  description:
-    "An anticipated biographical exploration of Ambrose Patterson's extraordinary life and legacy. Coming soon to readers everywhere.",
+  title: {
+    default: OG_TITLE,
+    template: `%s — Ambrose Patterson`,
+  },
+  description: OG_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
+    siteName: "Ambrose Patterson: His Life & Art",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ambrose Patterson: His Life & Art — book cover",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
