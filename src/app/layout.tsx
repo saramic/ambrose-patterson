@@ -10,7 +10,7 @@ const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
-  variable: "--font-heading",
+  variable: "--font-serif",
   display: "swap",
 });
 
