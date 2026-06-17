@@ -133,5 +133,8 @@
   }
   html {
     @apply font-sans;
+    /* auto = honour iOS Accessibility Larger Text; antd reset overrides this to 100% (locked) */
+    -webkit-text-size-adjust: auto;
+    text-size-adjust: auto;
   }
 }
