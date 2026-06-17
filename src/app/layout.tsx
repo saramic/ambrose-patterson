@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Geist } from "next/font/google";
-import { Playfair_Display } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
-const playfair = Playfair_Display({
+const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   variable: "--font-heading",
   display: "swap",
 });
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("font-sans", geist.variable, playfair.variable)}>
+      className={cn("font-sans", geist.variable, libreBaskerville.variable)}>
       <body>
         <Providers>{children}</Providers>
       </body>
