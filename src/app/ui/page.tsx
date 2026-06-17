@@ -4,7 +4,6 @@ import { HeroSection } from "@/components/book/HeroSection";
 import { ArtistSection } from "@/components/book/ArtistSection";
 import { BookSection } from "@/components/book/BookSection";
 import { AuthorSection } from "@/components/book/AuthorSection";
-import { PurchaseSection } from "@/components/book/PurchaseSection";
 import { SiteFooter } from "@/components/book/SiteFooter";
 import { SectionHeader } from "@/components/book/SectionHeader";
 import { BookCoverMockup } from "@/components/book/BookCoverMockup";
@@ -100,7 +99,7 @@ export default function UIGallery() {
                   size: "lg",
                   className: "font-sans tracking-wider uppercase text-xs px-8",
                 })}>
-                Order Now — $89.95 AUS
+                About the Book
               </a>
               <a
                 href="#"
@@ -307,13 +306,6 @@ export default function UIGallery() {
           description="Jane Alexander bio + pull quote"
           bg="bg-transparent">
           <AuthorSection />
-        </ComponentFrame>
-
-        <ComponentFrame
-          name="PurchaseSection"
-          description="Price card + mailto CTA"
-          bg="bg-transparent">
-          <PurchaseSection />
         </ComponentFrame>
 
         <ComponentFrame

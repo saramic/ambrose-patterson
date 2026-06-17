@@ -36,17 +36,17 @@ export function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <a
-              href="#purchase"
+              href="#book"
               className={buttonVariants({
                 size: "lg",
                 className: "font-sans tracking-wider uppercase text-xs px-8",
               })}>
-              Order Now — $89.95 AUS
+              About the book
             </a>
             <a
-              href="#book"
+              href="mailto:jane.alexander.acva@gmail.com"
               className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">
-              About the book
+              Enquire
             </a>
           </div>
           <p className="font-sans text-xs text-muted-foreground/60 tracking-wide">

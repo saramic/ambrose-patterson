@@ -5,7 +5,6 @@ const links = [
   { label: "The Artist", href: "#artist" },
   { label: "The Book", href: "#book" },
   { label: "The Author", href: "#author" },
-  { label: "Purchase", href: "#purchase" },
 ];
 
 export function SiteNav() {

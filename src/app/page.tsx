@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/book/HeroSection";
 import { ArtistSection } from "@/components/book/ArtistSection";
 import { BookSection } from "@/components/book/BookSection";
 import { AuthorSection } from "@/components/book/AuthorSection";
-import { PurchaseSection } from "@/components/book/PurchaseSection";
 import { SiteFooter } from "@/components/book/SiteFooter";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
         <ArtistSection />
         <BookSection />
         <AuthorSection />
-        <PurchaseSection />
       </main>
       <SiteFooter />
     </div>
