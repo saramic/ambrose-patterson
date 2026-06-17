@@ -1,0 +1,53 @@
+import { Separator } from "@/components/ui/separator";
+
+export function SiteFooter() {
+  return (
+    <footer className="bg-foreground text-background/80">
+      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col gap-6">
+        <div className="flex flex-col md:flex-row justify-between gap-6 items-start">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-3">
+              {/* ACVA mark in white */}
+              <div className="grid grid-cols-2 gap-px w-7 h-7">
+                {["A", "C", "V", "A"].map((l, i) => (
+                  <div
+                    key={i}
+                    className="bg-background flex items-center justify-center">
+                    <span className="text-foreground text-[6px] font-bold font-sans leading-none">
+                      {l}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <span className="font-heading text-background/90 text-sm">
+                Alexander Calder Visual Arts
+              </span>
+            </div>
+            <p className="font-sans text-xs text-background/50 max-w-xs leading-relaxed">
+              ACVA Pty Ltd was established by Jane Alexander in 2020 to support
+              photographic, curatorial and publishing projects.
+            </p>
+          </div>
+          <div className="flex flex-col gap-1 text-right">
+            <p className="font-sans text-xs tracking-widest uppercase text-background/40">
+              Contact
+            </p>
+            <a
+              href="mailto:jane.alexander.acva@gmail.com"
+              className="font-sans text-xs text-background/70 hover:text-background transition-colors">
+              jane.alexander.acva@gmail.com
+            </a>
+          </div>
+        </div>
+        <Separator className="opacity-20" />
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-sans text-background/40">
+          <p>© {new Date().getFullYear()} Jane Alexander · ACVA Pty Ltd</p>
+          <p>
+            <em>Ambrose Patterson: His Life &amp; Art</em> · ISBN
+            978-0-6467-3365-4
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
