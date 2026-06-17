@@ -43,11 +43,6 @@ export function HeroSection() {
               })}>
               About the book
             </a>
-            <a
-              href="mailto:jane.alexander.acva@gmail.com"
-              className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">
-              Enquire
-            </a>
           </div>
           <p className="font-sans text-xs text-muted-foreground/60 tracking-wide">
             By Jane Alexander · ISBN 978-0-6467-3365-4

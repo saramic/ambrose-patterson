@@ -18,16 +18,6 @@ export function SiteFooter() {
               photographic, curatorial and publishing projects.
             </p>
           </div>
-          <div className="flex flex-col gap-1 text-right">
-            <p className="font-sans text-xs tracking-widest uppercase text-background/40">
-              Contact
-            </p>
-            <a
-              href="mailto:jane.alexander.acva@gmail.com"
-              className="font-sans text-xs text-background/70 hover:text-background transition-colors">
-              jane.alexander.acva@gmail.com
-            </a>
-          </div>
         </div>
         <Separator className="opacity-20" />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-sans text-background/40">
