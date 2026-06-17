@@ -3,6 +3,8 @@
 [
 ![Build Checks](https://github.com/saramic/ambrose-patterson/actions/workflows/build-checks.yml/badge.svg)](https://github.com/saramic/ambrose-patterson/actions/workflows/build-checks.yml)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09ff821a-646d-4ef1-b403-8bd64787e461/deploy-status)](https://app.netlify.com/projects/ambrose-patterson/deploys)
+
 https://ambrosepatterson.com.au/
 
 ---
