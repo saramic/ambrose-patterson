@@ -1,3 +1,5 @@
+import { AcvaLogo } from "./AcvaLogo";
+
 export function BookCoverMockup({ className }: { className?: string }) {
   return (
     <div
@@ -93,40 +95,16 @@ export function BookCoverMockup({ className }: { className?: string }) {
             Jane Alexander
           </p>
         </div>
-        {/* ACVA logo area */}
+        {/* ACVA logo */}
         <div
           style={{
             position: "absolute",
             top: "16px",
             right: "16px",
             zIndex: 1,
-            opacity: 0.85,
+            opacity: 0.9,
           }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              width: "28px",
-              height: "28px",
-              gap: "2px",
-            }}>
-            {["A", "C", "V", "A"].map((l, i) => (
-              <div
-                key={i}
-                style={{
-                  background: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "7px",
-                  fontFamily: "var(--font-sans), sans-serif",
-                  fontWeight: 700,
-                  color: "oklch(0.16 0.018 55)",
-                }}>
-                {l}
-              </div>
-            ))}
-          </div>
+          <AcvaLogo size={36} className="text-white" />
         </div>
       </div>
     </div>

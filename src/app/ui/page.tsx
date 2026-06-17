@@ -12,6 +12,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { AcvaLogo } from "@/components/book/AcvaLogo";
 
 function ComponentFrame({
   name,
@@ -221,6 +222,41 @@ export default function UIGallery() {
             description="CSS-rendered cover — no image dependency">
             <div className="flex justify-center">
               <BookCoverMockup />
+            </div>
+          </ComponentFrame>
+
+          <ComponentFrame
+            name="AcvaLogo"
+            description="Traced SVG — currentColor, scales to any size">
+            <div className="flex flex-wrap items-end gap-8">
+              <div className="flex flex-col items-center gap-2">
+                <AcvaLogo size={16} className="text-foreground" />
+                <span className="text-xs text-muted-foreground">16</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <AcvaLogo size={24} className="text-foreground" />
+                <span className="text-xs text-muted-foreground">24</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <AcvaLogo size={32} className="text-foreground" />
+                <span className="text-xs text-muted-foreground">32 (nav)</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <AcvaLogo size={48} className="text-foreground" />
+                <span className="text-xs text-muted-foreground">48</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <AcvaLogo size={80} className="text-foreground" />
+                <span className="text-xs text-muted-foreground">80</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 bg-foreground p-3 rounded-sm">
+                <AcvaLogo size={48} className="text-background" />
+                <span className="text-xs text-background/60">on dark</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 bg-primary p-3 rounded-sm">
+                <AcvaLogo size={48} className="text-white" />
+                <span className="text-xs text-white/60">on crimson</span>
+              </div>
             </div>
           </ComponentFrame>
         </section>

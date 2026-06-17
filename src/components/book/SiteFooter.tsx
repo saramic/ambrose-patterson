@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { AcvaLogo } from "./AcvaLogo";
 
 export function SiteFooter() {
   return (
@@ -7,18 +8,7 @@ export function SiteFooter() {
         <div className="flex flex-col md:flex-row justify-between gap-6 items-start">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
-              {/* ACVA mark in white */}
-              <div className="grid grid-cols-2 gap-px w-7 h-7">
-                {["A", "C", "V", "A"].map((l, i) => (
-                  <div
-                    key={i}
-                    className="bg-background flex items-center justify-center">
-                    <span className="text-foreground text-[6px] font-bold font-sans leading-none">
-                      {l}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <AcvaLogo size={36} className="text-background" />
               <span className="font-heading text-background/90 text-sm">
                 Alexander Calder Visual Arts
               </span>

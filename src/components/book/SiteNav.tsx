@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { AcvaLogo } from "./AcvaLogo";
 
 const links = [
   { label: "The Artist", href: "#artist" },
@@ -11,19 +12,8 @@ export function SiteNav() {
   return (
     <header className="w-full bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          {/* ACVA grid mark */}
-          <div className="grid grid-cols-2 gap-px w-6 h-6">
-            {["A", "C", "V", "A"].map((l, i) => (
-              <div
-                key={i}
-                className="bg-foreground flex items-center justify-center">
-                <span className="text-background text-[6px] font-bold font-sans leading-none">
-                  {l}
-                </span>
-              </div>
-            ))}
-          </div>
+        <a href="#" className="flex items-center gap-3">
+          <AcvaLogo size={32} className="text-foreground" />
           <span className="font-heading text-sm tracking-wide hidden sm:block">
             Ambrose Patterson
           </span>

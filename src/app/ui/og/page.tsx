@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { AcvaLogo } from "@/components/book/AcvaLogo";
 
 const META = {
   title: "Ambrose Patterson: His Life & Art",
@@ -49,6 +50,10 @@ function OGImagePlaceholder({
           style={{ fontFamily: "serif", fontSize: "clamp(14px, 2vw, 22px)" }}>
           His Life &amp; Art
         </p>
+      </div>
+      {/* ACVA logo — top right */}
+      <div className="absolute top-4 right-12 z-10 opacity-90">
+        <AcvaLogo size={52} className="text-white" />
       </div>
       {/* Spine strip */}
       <div
