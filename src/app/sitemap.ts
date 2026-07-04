@@ -1,0 +1,18 @@
+import type { MetadataRoute } from "next";
+
+const SITE_URL = "https://ambrosepatterson.com.au";
+
+// /reviews, /launch, /ui and /ui/og are excluded (dummy data / internal
+// preview pages, not ready for indexing — see robots.ts). Anchor sections
+// (#artist, #book, #author) live on this one page and aren't separately
+// crawlable documents, so they aren't listed as their own sitemap entries.
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: SITE_URL,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+  ];
+}

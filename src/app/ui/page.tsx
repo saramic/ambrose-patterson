@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNav } from "@/components/book/SiteNav";
 import { HeroSection } from "@/components/book/HeroSection";
@@ -12,6 +13,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { AcvaLogo } from "@/components/book/AcvaLogo";
+
+export const metadata: Metadata = {
+  title: "Component Library — Internal",
+  robots: { index: false, follow: false },
+};
 
 function ComponentFrame({
   name,

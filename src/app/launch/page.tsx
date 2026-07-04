@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Something is coming to light. Melbourne, Victoria. 15 August 2026.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/launch" },
 };
 
 const DARK = "oklch(0.07 0.01 55)";

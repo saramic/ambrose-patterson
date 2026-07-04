@@ -15,7 +15,7 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
 });
 
-const SITE_URL = "https://ambrosepatterson.com";
+const SITE_URL = "https://ambrosepatterson.com.au";
 const OG_TITLE = "Ambrose Patterson: His Life & Art";
 const OG_DESCRIPTION =
   "The first authoritative monograph on the significant Australian-American modernist — from bohemian Paris at the fin de siècle to the Pacific Northwest. By Jane Alexander.";
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
   description: OG_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: SITE_URL,

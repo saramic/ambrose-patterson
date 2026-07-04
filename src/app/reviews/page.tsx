@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Press Notices — Ambrose Patterson: His Life & Art",
   description:
     "What the critics say about Ambrose Patterson: His Life & Art by Jane Alexander.",
+  robots: { index: false, follow: false },
+  alternates: { canonical: "/reviews" },
 };
 
 const NP = "oklch(0.95 0.028 88)"; // aged newsprint

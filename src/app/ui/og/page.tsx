@@ -1,12 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { AcvaLogo } from "@/components/book/AcvaLogo";
+
+export const metadata: Metadata = {
+  title: "OG Preview — Internal",
+  robots: { index: false, follow: false },
+};
 
 const META = {
   title: "Ambrose Patterson: His Life & Art",
   description:
     "The first authoritative monograph on the significant Australian-American modernist — from bohemian Paris at the fin de siècle to the Pacific Northwest. By Jane Alexander.",
-  domain: "ambrosepatterson.com",
+  domain: "ambrosepatterson.com.au",
   imageAlt: "Ambrose Patterson: His Life & Art — book cover",
 };
 
@@ -277,7 +283,7 @@ export default function OGPreview() {
           </h2>
           <div className="bg-muted/40 rounded-sm p-5 border border-border/50 overflow-x-auto">
             <pre className="text-xs text-muted-foreground leading-relaxed whitespace-pre">{`<meta property="og:type"        content="website" />
-<meta property="og:url"         content="https://ambrosepatterson.com" />
+<meta property="og:url"         content="https://ambrosepatterson.com.au" />
 <meta property="og:title"       content="${META.title}" />
 <meta property="og:description" content="${META.description.slice(0, 60)}…" />
 <meta property="og:image"       content="/og-image.jpg" />
