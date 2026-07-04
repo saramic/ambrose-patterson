@@ -19,12 +19,12 @@ export function HeroSection() {
             <span className="font-sans text-xs tracking-[0.25em] uppercase text-primary">
               New Release · ACVA
             </span>
-            <h1 className="font-heading text-5xl md:text-6xl leading-[1.05] text-foreground">
+            <h1 className="font-heading text-5xl md:text-6xl leading-[1.05] text-foreground uppercase">
               Ambrose
               <br />
               Patterson
             </h1>
-            <p className="font-heading text-2xl md:text-3xl italic text-muted-foreground mt-1">
+            <p className="font-heading text-2xl md:text-3xl italic text-foreground mt-1">
               His Life &amp; Art
             </p>
           </div>
