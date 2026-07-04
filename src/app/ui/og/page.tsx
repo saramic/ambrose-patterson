@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const META = {
   title: "Ambrose Patterson: His Life & Art",
   description:
-    "The first authoritative monograph on the significant Australian-American modernist — from bohemian Paris at the fin de siècle to the Pacific Northwest. By Jane Alexander.",
+    "The first authoritative monograph on Ambrose Patterson — Australian-American modernist, from bohemian Paris to the Pacific Northwest. By Jane Alexander.",
   domain: "ambrosepatterson.com.au",
   imageAlt: "Ambrose Patterson: His Life & Art — book cover",
 };

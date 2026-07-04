@@ -18,7 +18,7 @@ const libreBaskerville = Libre_Baskerville({
 const SITE_URL = "https://ambrosepatterson.com.au";
 const OG_TITLE = "Ambrose Patterson: His Life & Art";
 const OG_DESCRIPTION =
-  "The first authoritative monograph on the significant Australian-American modernist — from bohemian Paris at the fin de siècle to the Pacific Northwest. By Jane Alexander.";
+  "The first authoritative monograph on Ambrose Patterson — Australian-American modernist, from bohemian Paris to the Pacific Northwest. By Jane Alexander.";
 
 export const metadata: Metadata = {
   title: {
