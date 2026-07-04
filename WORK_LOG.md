@@ -65,6 +65,30 @@ This is the actual "webmaster tools" flow Google pointed you at.
       content — see P2.)
 - [x] **Set the same property up in Bing Webmaster Tools** (free, 5
       minutes, can import verification from GSC) — small extra reach.
+- [x] **Set up IndexNow** (2026-07-05) — Bing's push protocol so new/changed
+      pages get crawled without waiting on Bing's own schedule. Key file
+      lives at `public/548bc64a079548b5140935eeba0c9b8d.txt` (served at
+      `https://ambrosepatterson.com.au/548bc64a079548b5140935eeba0c9b8d.txt`
+      once deployed — verified it serves correctly from a local prod
+      build). To notify Bing/Yandex/Seznam after any content change:
+      ```
+      curl "https://api.indexnow.org/indexnow?url=https://ambrosepatterson.com.au/&key=548bc64a079548b5140935eeba0c9b8d&keyLocation=https://ambrosepatterson.com.au/548bc64a079548b5140935eeba0c9b8d.txt"
+      ```
+      A `200`/`202` response means it was accepted. Run this once right
+      after deploying the key file, then again any time homepage content
+      changes materially.
+- [ ] **Diagnosis, 2026-07-04**: Bing Webmaster Tools reported the
+      homepage as "Discovered but not crawled" / "URL cannot appear on
+      Bing", discovered 06 Feb 2026. Checked live: `200` for browser/
+      Googlebot/bingbot UAs alike, fast TTFB (~58ms), full content in raw
+      HTML (no JS-only rendering), correct canonical/redirects, valid
+      robots.txt + sitemap now deployed — no live technical blocker found.
+      Most likely cause: a stale discovery from before today's fixes
+      existed, combined with Bing deprioritizing crawl frequency for a
+      new, low-authority domain. Fix: use "Request indexing" in both GSC
+      and Bing Webmaster Tools now that the real fixes are live, and the
+      IndexNow ping above. Re-check in a few days — see the two waiting
+      links below.
 
 - [ ] waiting on https://search.google.com/search-console/index?resource_id=sc-domain%3Aambrosepatterson.com.au
 - [ ] waiting on https://www.bing.com/webmasters/urlinspection?siteUrl=https://ambrosepatterson.com.au/
