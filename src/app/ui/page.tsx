@@ -6,7 +6,7 @@ import { BookSection } from "@/components/book/BookSection";
 import { AuthorSection } from "@/components/book/AuthorSection";
 import { SiteFooter } from "@/components/book/SiteFooter";
 import { SectionHeader } from "@/components/book/SectionHeader";
-import { BookCoverMockup } from "@/components/book/BookCoverMockup";
+import { BookCover } from "@/components/book/BookCover";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -217,10 +217,10 @@ export default function UIGallery() {
           </ComponentFrame>
 
           <ComponentFrame
-            name="BookCoverMockup"
-            description="CSS-rendered cover — no image dependency">
+            name="BookCover"
+            description="Front cover artwork with blur-up placeholder">
             <div className="flex justify-center">
-              <BookCoverMockup />
+              <BookCover />
             </div>
           </ComponentFrame>
 

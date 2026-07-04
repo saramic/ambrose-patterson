@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/ui/button";
-import { BookCoverMockup } from "./BookCoverMockup";
+import { BookCover } from "./BookCover";
 
 export function HeroSection() {
   return (
@@ -13,7 +13,7 @@ export function HeroSection() {
         }}
       />
       <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center gap-14">
-        <BookCoverMockup />
+        <BookCover />
         <div className="flex flex-col gap-6 md:gap-7 max-w-lg">
           <div className="flex flex-col gap-1">
             <span className="font-sans text-xs tracking-[0.25em] uppercase text-primary">
