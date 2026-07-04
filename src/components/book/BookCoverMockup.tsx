@@ -17,7 +17,7 @@ export function BookCoverMockup({ className }: { className?: string }) {
       <div
         style={{
           width: "32px",
-          background: "oklch(0.50 0.21 3)",
+          background: "oklch(0.665 0.178 20.1)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

@@ -57,8 +57,8 @@
   --card-foreground: oklch(0.16 0.018 55);
   --popover: oklch(0.99 0.008 85);
   --popover-foreground: oklch(0.16 0.018 55);
-  /* Primary: crimson from the spine */
-  --primary: oklch(0.5 0.21 3);
+  /* Primary: spine colour red */
+  --primary: oklch(0.665 0.178 20.1);
   --primary-foreground: oklch(0.99 0 0);
   /* Secondary: sage/olive green from the back cover */
   --secondary: oklch(0.6 0.075 120);
@@ -72,9 +72,9 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.87 0.012 85);
   --input: oklch(0.87 0.012 85);
-  --ring: oklch(0.5 0.21 3);
+  --ring: oklch(0.665 0.178 20.1);
   /* Chart palette draws from the painting's colours */
-  --chart-1: oklch(0.5 0.21 3); /* crimson */
+  --chart-1: oklch(0.665 0.178 20.1); /* spine colour red */
   --chart-2: oklch(0.6 0.075 120); /* sage */
   --chart-3: oklch(0.78 0.11 80); /* gold */
   --chart-4: oklch(0.55 0.12 250); /* deep blue */
@@ -82,12 +82,12 @@
   --radius: 0.25rem;
   --sidebar: oklch(0.975 0.012 85);
   --sidebar-foreground: oklch(0.16 0.018 55);
-  --sidebar-primary: oklch(0.5 0.21 3);
+  --sidebar-primary: oklch(0.665 0.178 20.1);
   --sidebar-primary-foreground: oklch(0.99 0 0);
   --sidebar-accent: oklch(0.93 0.012 85);
   --sidebar-accent-foreground: oklch(0.16 0.018 55);
   --sidebar-border: oklch(0.87 0.012 85);
-  --sidebar-ring: oklch(0.5 0.21 3);
+  --sidebar-ring: oklch(0.665 0.178 20.1);
 }
 
 .dark {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const NP = "oklch(0.95 0.028 88)"; // aged newsprint
 const AGED = "oklch(0.91 0.026 86)"; // slightly darker for boxes
 const INK = "oklch(0.09 0.01 50)"; // near-black ink
-const CRIMSON = "oklch(0.50 0.21 3)";
+const SPINE_RED = "oklch(0.665 0.178 20.1)";
 const GOLD = "oklch(0.66 0.10 82)";
 const CREAM = "oklch(0.97 0.012 88)";
 
@@ -58,7 +58,7 @@ function OrnamentRule() {
         style={{
           fontSize: "10px",
           letterSpacing: "0.3em",
-          color: CRIMSON,
+          color: SPINE_RED,
         }}>
         ✦ ✦ ✦
       </span>
@@ -161,7 +161,7 @@ export default function ReviewsPage() {
                   letterSpacing: "0.38em",
                   textTransform: "uppercase",
                   margin: 0,
-                  color: CRIMSON,
+                  color: SPINE_RED,
                 }}>
                 ✦&ensp; Special Literary Supplement &ensp;✦&ensp; Ambrose
                 Patterson: His Life &amp; Art &ensp;✦
@@ -212,7 +212,7 @@ export default function ReviewsPage() {
                     fontSize: "clamp(11px, 1.6vw, 14px)",
                     letterSpacing: "0.22em",
                     margin: 0,
-                    color: CRIMSON,
+                    color: SPINE_RED,
                   }}>
                   <Stars size="1.1em" />
                   &ensp;&ensp; Universally Acclaimed &ensp;&ensp;
@@ -358,7 +358,7 @@ export default function ReviewsPage() {
                     letterSpacing: "0.28em",
                     textTransform: "uppercase",
                     marginBottom: "6px",
-                    color: CRIMSON,
+                    color: SPINE_RED,
                   }}>
                   <Stars n={r.stars} size="0.9em" />
                 </p>
@@ -417,7 +417,7 @@ export default function ReviewsPage() {
                 top: "clamp(12px, 2vw, 20px)",
                 left: "clamp(16px, 2.5vw, 28px)",
                 fontSize: "clamp(48px, 8vw, 80px)",
-                color: CRIMSON,
+                color: SPINE_RED,
                 lineHeight: 1,
                 fontFamily: "Georgia, serif",
                 opacity: 0.7,
@@ -431,7 +431,7 @@ export default function ReviewsPage() {
                 bottom: "clamp(4px, 1vw, 8px)",
                 right: "clamp(16px, 2.5vw, 28px)",
                 fontSize: "clamp(48px, 8vw, 80px)",
-                color: CRIMSON,
+                color: SPINE_RED,
                 lineHeight: 1,
                 fontFamily: "Georgia, serif",
                 opacity: 0.7,
@@ -490,7 +490,7 @@ export default function ReviewsPage() {
                   }}>
                   <Stars n={r.stars} />
                   &ensp;
-                  <span style={{ color: CRIMSON }}>
+                  <span style={{ color: SPINE_RED }}>
                     {r.publication} · {r.location}
                   </span>
                 </p>
@@ -552,7 +552,7 @@ export default function ReviewsPage() {
                 letterSpacing: "0.36em",
                 textTransform: "uppercase",
                 margin: "0 0 14px",
-                color: CRIMSON,
+                color: SPINE_RED,
               }}>
               ◆ &ensp; The Verdict &ensp; ◆
             </p>

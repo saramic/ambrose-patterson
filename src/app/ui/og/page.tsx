@@ -58,7 +58,7 @@ function OGImagePlaceholder({
       {/* Spine strip */}
       <div
         className="absolute top-0 right-0 w-8 h-full"
-        style={{ background: "oklch(0.50 0.21 3)" }}
+        style={{ background: "oklch(0.665 0.178 20.1)" }}
       />
     </div>
   );

@@ -254,7 +254,7 @@ export default function UIGallery() {
               </div>
               <div className="flex flex-col items-center gap-2 bg-primary p-3 rounded-sm">
                 <AcvaLogo size={48} className="text-white" />
-                <span className="text-xs text-white/60">on crimson</span>
+                <span className="text-xs text-white/60">on spine red</span>
               </div>
             </div>
           </ComponentFrame>

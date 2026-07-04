@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const DARK = "oklch(0.07 0.01 55)";
 const CREAM = "oklch(0.93 0.01 80)";
-const CRIMSON = "oklch(0.50 0.21 3)";
+const SPINE_RED = "oklch(0.665 0.178 20.1)";
 const GOLD = "oklch(0.72 0.09 80)";
 const DIM = "oklch(0.38 0.01 75)";
 const SUBTLE = "oklch(0.20 0.01 60)";
@@ -62,7 +62,7 @@ export default function LaunchPage() {
           position: "fixed",
           inset: 0,
           background: `
-            radial-gradient(ellipse 70% 50% at 50% 20%, oklch(0.50 0.21 3 / 0.07) 0%, transparent 65%),
+            radial-gradient(ellipse 70% 50% at 50% 20%, oklch(0.665 0.178 20.1 / 0.07) 0%, transparent 65%),
             radial-gradient(ellipse 50% 70% at 80% 80%, oklch(0.72 0.09 80 / 0.04) 0%, transparent 55%)
           `,
           pointerEvents: "none",
@@ -141,13 +141,13 @@ export default function LaunchPage() {
               style={{
                 width: "clamp(32px, 6vw, 72px)",
                 height: "1px",
-                background: CRIMSON,
+                background: SPINE_RED,
                 opacity: 0.45,
               }}
             />
             <span
               style={{
-                color: CRIMSON,
+                color: SPINE_RED,
                 fontSize: "8px",
                 letterSpacing: "0.28em",
                 textTransform: "uppercase",
@@ -158,7 +158,7 @@ export default function LaunchPage() {
               style={{
                 width: "clamp(32px, 6vw, 72px)",
                 height: "1px",
-                background: CRIMSON,
+                background: SPINE_RED,
                 opacity: 0.45,
               }}
             />
@@ -203,7 +203,7 @@ export default function LaunchPage() {
             Five o&apos;clock in the afternoon · Melbourne, Victoria
           </p>
 
-          <VLine color={CRIMSON} />
+          <VLine color={SPINE_RED} />
 
           {/* Countdown */}
           <LaunchCountdown />
@@ -234,11 +234,11 @@ export default function LaunchPage() {
               width: "88px",
               height: "88px",
               borderRadius: "50%",
-              backgroundColor: CRIMSON,
+              backgroundColor: SPINE_RED,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: `0 0 0 1px oklch(0.50 0.21 3 / 0.40), 0 0 32px oklch(0.50 0.21 3 / 0.25), 0 0 64px oklch(0.50 0.21 3 / 0.10)`,
+              boxShadow: `0 0 0 1px oklch(0.665 0.178 20.1 / 0.40), 0 0 32px oklch(0.665 0.178 20.1 / 0.25), 0 0 64px oklch(0.665 0.178 20.1 / 0.10)`,
             }}>
             <div style={{ color: "white" }}>
               <AcvaLogo size={50} />
@@ -360,26 +360,26 @@ export default function LaunchPage() {
               {
                 top: "-1px",
                 left: "-1px",
-                borderTop: `1px solid ${CRIMSON}`,
-                borderLeft: `1px solid ${CRIMSON}`,
+                borderTop: `1px solid ${SPINE_RED}`,
+                borderLeft: `1px solid ${SPINE_RED}`,
               },
               {
                 top: "-1px",
                 right: "-1px",
-                borderTop: `1px solid ${CRIMSON}`,
-                borderRight: `1px solid ${CRIMSON}`,
+                borderTop: `1px solid ${SPINE_RED}`,
+                borderRight: `1px solid ${SPINE_RED}`,
               },
               {
                 bottom: "-1px",
                 left: "-1px",
-                borderBottom: `1px solid ${CRIMSON}`,
-                borderLeft: `1px solid ${CRIMSON}`,
+                borderBottom: `1px solid ${SPINE_RED}`,
+                borderLeft: `1px solid ${SPINE_RED}`,
               },
               {
                 bottom: "-1px",
                 right: "-1px",
-                borderBottom: `1px solid ${CRIMSON}`,
-                borderRight: `1px solid ${CRIMSON}`,
+                borderBottom: `1px solid ${SPINE_RED}`,
+                borderRight: `1px solid ${SPINE_RED}`,
               },
             ].map((s, i) => (
               <span
@@ -399,7 +399,7 @@ export default function LaunchPage() {
                 fontSize: "8px",
                 letterSpacing: "0.30em",
                 textTransform: "uppercase",
-                color: CRIMSON,
+                color: SPINE_RED,
                 margin: 0,
               }}>
               A Private Occasion
