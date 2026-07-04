@@ -98,6 +98,19 @@
   --sidebar-ring: oklch(0.665 0.178 20.1);
 }
 
+/* Cooler off-white experiment — toggle with #cool-bg in the URL, see layout.tsx */
+:root[data-bg-cool] {
+  --background: oklch(0.98 0.004 240);
+  --card: oklch(0.995 0.002 240);
+  --popover: oklch(0.995 0.002 240);
+  --muted: oklch(0.94 0.003 240);
+  --border: oklch(0.89 0.003 240);
+  --input: oklch(0.89 0.003 240);
+  --sidebar: oklch(0.98 0.004 240);
+  --sidebar-accent: oklch(0.94 0.003 240);
+  --sidebar-border: oklch(0.89 0.003 240);
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

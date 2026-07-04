@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Geist } from "next/font/google";
 import { Libre_Baskerville } from "next/font/google";
+import Script from "next/script";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -66,6 +67,20 @@ export default function RootLayout({
       lang="en"
       className={cn("font-sans", geist.variable, libreBaskerville.variable)}>
       <body>
+        <Script id="cool-bg-toggle" strategy="beforeInteractive">
+          {`
+            (function () {
+              function apply() {
+                document.documentElement.toggleAttribute(
+                  "data-bg-cool",
+                  window.location.hash === "#cool-bg"
+                );
+              }
+              apply();
+              window.addEventListener("hashchange", apply);
+            })();
+          `}
+        </Script>
         <Providers>{children}</Providers>
       </body>
     </html>
