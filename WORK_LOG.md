@@ -54,17 +54,20 @@ These are bugs, not "nice to have SEO polish." Fixed 2026-07-04.
 
 This is the actual "webmaster tools" flow Google pointed you at.
 
-- [ ] **Verify the property in Google Search Console** for
+- [x] **Verify the property in Google Search Console** for
       `https://ambrosepatterson.com.au` (domain property via DNS TXT
       record is preferable to URL-prefix — covers www/non-www and
       http/https in one go).
-- [ ] **Submit the sitemap** (`/sitemap.xml`) in Search Console once P0
+- [x] **Submit the sitemap** (`/sitemap.xml`) in Search Console once P0
       is deployed.
-- [ ] **Request indexing** for `/` manually via URL Inspection to speed
+- [X] **Request indexing** for `/` manually via URL Inspection to speed
       up first crawl rather than waiting. (`/reviews` once it has real
       content — see P2.)
-- [ ] **Set the same property up in Bing Webmaster Tools** (free, 5
+- [x] **Set the same property up in Bing Webmaster Tools** (free, 5
       minutes, can import verification from GSC) — small extra reach.
+
+- [ ] waiting on https://search.google.com/search-console/index?resource_id=sc-domain%3Aambrosepatterson.com.au
+- [ ] waiting on https://www.bing.com/webmasters/urlinspection?siteUrl=https://ambrosepatterson.com.au/
 
 ## P2 — Structured data & content (next 1–2 weeks)
 
