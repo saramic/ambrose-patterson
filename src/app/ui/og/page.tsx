@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-import { AcvaLogo } from "@/components/book/AcvaLogo";
 
 export const metadata: Metadata = {
   title: "OG Preview — Internal",
@@ -16,55 +16,23 @@ const META = {
   imageAlt: "Ambrose Patterson: His Life & Art — book cover",
 };
 
-function OGImagePlaceholder({
+function OGImagePreview({
   className,
   style,
+  sizes = "500px",
 }: {
   className?: string;
   style?: React.CSSProperties;
+  sizes?: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden flex items-end ${className ?? ""}`}
-      style={{
-        ...style,
-        background:
-          "linear-gradient(155deg, oklch(0.78 0.11 80) 0%, oklch(0.68 0.10 110) 30%, oklch(0.55 0.12 250 / 0.5) 65%, oklch(0.62 0.13 40) 100%)",
-      }}>
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to top, oklch(0.16 0.018 55 / 0.75) 0%, transparent 55%)",
-        }}
-      />
-      <div className="relative z-10 p-8">
-        <p
-          className="text-white/60 text-xs tracking-[0.2em] uppercase mb-2"
-          style={{ fontFamily: "serif" }}>
-          Jane Alexander · ACVA
-        </p>
-        <h2
-          className="text-white font-bold leading-[1.05]"
-          style={{ fontFamily: "serif", fontSize: "clamp(24px, 4vw, 48px)" }}>
-          AMBROSE
-          <br />
-          PATTERSON
-        </h2>
-        <p
-          className="text-white/80 italic mt-2"
-          style={{ fontFamily: "serif", fontSize: "clamp(14px, 2vw, 22px)" }}>
-          His Life &amp; Art
-        </p>
-      </div>
-      {/* ACVA logo — top right */}
-      <div className="absolute top-4 right-12 z-10 opacity-90">
-        <AcvaLogo size={52} className="text-white" />
-      </div>
-      {/* Spine strip */}
-      <div
-        className="absolute top-0 right-0 w-8 h-full"
-        style={{ background: "oklch(0.665 0.178 20.1)" }}
+    <div className={`relative overflow-hidden ${className ?? ""}`} style={style}>
+      <Image
+        src="/og-image.jpg"
+        alt={META.imageAlt}
+        fill
+        sizes={sizes}
+        className="object-cover"
       />
     </div>
   );
@@ -112,13 +80,13 @@ export default function OGPreview() {
         <section className="flex flex-col gap-4">
           <h2 className="text-xl border-b border-border pb-3">OG Image</h2>
           <p className="text-sm text-muted-foreground">
-            1200 × 630 px — used by all platforms. Replace{" "}
+            1200 × 630 px — used by all platforms. Rendered from{" "}
             <code className="bg-muted px-1.5 py-0.5 rounded text-xs">
               /public/og-image.jpg
-            </code>{" "}
-            with the real artwork render.
+            </code>
+            .
           </p>
-          <OGImagePlaceholder
+          <OGImagePreview
             className="w-full rounded-sm"
             style={{ aspectRatio: "1200/630" } as React.CSSProperties}
           />
@@ -133,7 +101,7 @@ export default function OGPreview() {
           </h2>
           <CardLabel>Large card — image above, text below</CardLabel>
           <div className="max-w-[500px] border border-[#dddfe2] rounded overflow-hidden shadow-sm bg-white">
-            <OGImagePlaceholder
+            <OGImagePreview
               className="w-full"
               style={{ aspectRatio: "1200/630" } as React.CSSProperties}
             />
@@ -162,7 +130,7 @@ export default function OGPreview() {
           <h2 className="text-xl border-b border-border pb-3">Twitter / X</h2>
           <CardLabel>summary_large_image card</CardLabel>
           <div className="max-w-[500px] border border-[#cfd9de] rounded-2xl overflow-hidden bg-white shadow-sm">
-            <OGImagePlaceholder
+            <OGImagePreview
               className="w-full"
               style={{ aspectRatio: "1200/630" } as React.CSSProperties}
             />
@@ -192,7 +160,7 @@ export default function OGPreview() {
           <div className="max-w-[320px]">
             {/* iMessage bubble */}
             <div className="bg-[#e9e9eb] rounded-2xl overflow-hidden">
-              <OGImagePlaceholder
+              <OGImagePreview
                 className="w-full"
                 style={{ aspectRatio: "1200/630" } as React.CSSProperties}
               />
@@ -244,9 +212,10 @@ export default function OGPreview() {
                 {META.domain}
               </p>
             </div>
-            <OGImagePlaceholder
+            <OGImagePreview
               className="rounded shrink-0"
               style={{ width: "80px", height: "80px" } as React.CSSProperties}
+              sizes="80px"
             />
           </div>
           {/* Discord style */}
@@ -267,7 +236,7 @@ export default function OGPreview() {
               style={{ fontFamily: "system-ui, sans-serif" }}>
               {META.description}
             </p>
-            <OGImagePlaceholder
+            <OGImagePreview
               className="w-full rounded mt-1"
               style={{ aspectRatio: "1200/630" } as React.CSSProperties}
             />
@@ -296,10 +265,10 @@ export default function OGPreview() {
           </div>
           <p className="text-xs text-muted-foreground">
             All generated automatically by Next.js from{" "}
-            <code className="bg-muted px-1.5 py-0.5 rounded">layout.tsx</code> —
-            the only thing still needed is the actual{" "}
+            <code className="bg-muted px-1.5 py-0.5 rounded">layout.tsx</code>,
+            reading{" "}
             <code className="bg-muted px-1.5 py-0.5 rounded">og-image.jpg</code>{" "}
-            in <code className="bg-muted px-1.5 py-0.5 rounded">/public</code>.
+            from <code className="bg-muted px-1.5 py-0.5 rounded">/public</code>.
           </p>
         </section>
       </div>
