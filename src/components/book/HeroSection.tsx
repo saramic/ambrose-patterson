@@ -9,7 +9,7 @@ export function HeroSection() {
         className="absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 70% 50%, oklch(0.78 0.11 80 / 0.4) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 30%, oklch(0.60 0.075 120 / 0.3) 0%, transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 70% 50%, oklch(0.78 0.11 80 / 0.4) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 30%, oklch(0.783 0.067 110.7 / 0.3) 0%, transparent 60%)",
         }}
       />
       <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center gap-14">

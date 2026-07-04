@@ -12,7 +12,7 @@ const milestones = [
 
 export function ArtistSection() {
   return (
-    <section id="artist" className="bg-secondary/8 border-y border-border">
+    <section id="artist" className="bg-sage-tint border-y border-border">
       <div className="max-w-5xl mx-auto px-6 py-20 md:py-24 flex flex-col gap-14">
         <SectionHeader
           label="1877–1966"

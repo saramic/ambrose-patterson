@@ -24,8 +24,7 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Jane Alexander · ACVA Pty Ltd</p>
           <p>
             <span className="uppercase">Ambrose Patterson</span>
-            <em>: His Life &amp; Art</em> ·
-            ISBN 978-0-6467-3365-4
+            <em>: His Life &amp; Art</em> · ISBN 978-0-6467-3365-4
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export function AuthorSection() {
   return (
-    <section id="author" className="bg-secondary/8 border-y border-border">
+    <section id="author" className="bg-sage-tint border-y border-border">
       <div className="max-w-5xl mx-auto px-6 py-20 md:py-24 flex flex-col gap-14">
         <SectionHeader label="About" title="The Author" />
         <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start max-w-4xl mx-auto w-full">
@@ -12,10 +12,10 @@ export function AuthorSection() {
               className="rounded-sm w-40 h-48 flex items-end justify-center overflow-hidden"
               style={{
                 background:
-                  "linear-gradient(170deg, oklch(0.60 0.075 120 / 0.3) 0%, oklch(0.78 0.11 80 / 0.25) 100%)",
+                  "linear-gradient(170deg, oklch(0.783 0.067 110.7 / 0.3) 0%, oklch(0.78 0.11 80 / 0.25) 100%)",
                 border: "1px solid oklch(0.87 0.012 85)",
               }}>
-              <div className="w-full bg-secondary/20 py-3 px-4 border-t border-border/40">
+              <div className="w-full bg-sage-tint-strong py-3 px-4 border-t border-border/40">
                 <p className="font-heading text-sm text-center text-foreground/60 italic">
                   Jane Alexander
                 </p>
@@ -53,7 +53,7 @@ export function AuthorSection() {
               comprehensive reference on this significant Australian-American
               artist.
             </p>
-            <div className="mt-2 border-l-2 border-primary pl-4">
+            <div className="mt-2 border-l-2 border-mauve pl-4">
               <p className="font-heading italic text-foreground/70 text-sm leading-relaxed">
                 &ldquo;With unfettered access to family archives and thousands
                 of primary sources, the author&apos;s scholarly work will

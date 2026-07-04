@@ -29,6 +29,9 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
+  --color-sage-tint-strong: var(--sage-tint-strong);
+  --color-sage-tint: var(--sage-tint);
+  --color-mauve: var(--mauve);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
@@ -60,12 +63,17 @@
   /* Primary: spine colour red */
   --primary: oklch(0.665 0.178 20.1);
   --primary-foreground: oklch(0.99 0 0);
-  /* Secondary: sage/olive green from the back cover */
-  --secondary: oklch(0.6 0.075 120);
-  --secondary-foreground: oklch(0.99 0 0);
+  /* Secondary: back cover green, matched to print swatch #BABD8B */
+  --secondary: oklch(0.783 0.067 110.7);
+  --secondary-foreground: oklch(0.16 0.018 55);
   /* Muted: warm light grey */
   --muted: oklch(0.93 0.012 85);
   --muted-foreground: oklch(0.5 0.015 55);
+  /* Internal green tints, matched to print swatches #E0E1CB / #D6D9B6 */
+  --sage-tint: oklch(0.903 0.029 109.1);
+  --sage-tint-strong: oklch(0.874 0.047 111.3);
+  /* Mauve accent, matched to Pantone end-paper swatch #C1A0DA */
+  --mauve: oklch(0.755 0.089 310.2);
   /* Accent: warm gold from the painting */
   --accent: oklch(0.78 0.11 80);
   --accent-foreground: oklch(0.16 0.018 55);
@@ -75,7 +83,7 @@
   --ring: oklch(0.665 0.178 20.1);
   /* Chart palette draws from the painting's colours */
   --chart-1: oklch(0.665 0.178 20.1); /* spine colour red */
-  --chart-2: oklch(0.6 0.075 120); /* sage */
+  --chart-2: oklch(0.783 0.067 110.7); /* sage */
   --chart-3: oklch(0.78 0.11 80); /* gold */
   --chart-4: oklch(0.55 0.12 250); /* deep blue */
   --chart-5: oklch(0.62 0.13 40); /* terracotta */
@@ -101,6 +109,9 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+  --sage-tint: oklch(0.269 0 0);
+  --sage-tint-strong: oklch(0.269 0 0);
+  --mauve: oklch(0.556 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
