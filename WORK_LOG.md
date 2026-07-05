@@ -90,8 +90,10 @@ This is the actual "webmaster tools" flow Google pointed you at.
       IndexNow ping above. Re-check in a few days — see the two waiting
       links below.
 
-- [ ] waiting on https://search.google.com/search-console/index?resource_id=sc-domain%3Aambrosepatterson.com.au
-- [ ] waiting on https://www.bing.com/webmasters/urlinspection?siteUrl=https://ambrosepatterson.com.au/
+- [x] waiting on https://search.google.com/search-console/index?resource_id=sc-domain%3Aambrosepatterson.com.au
+      — indexed 2026-07-05.
+- [x] waiting on https://www.bing.com/webmasters/urlinspection?siteUrl=https://ambrosepatterson.com.au/
+      — indexed 2026-07-05.
 
 ## P2 — Structured data & content (next 1–2 weeks)
 
@@ -110,19 +112,72 @@ Higher-value, not urgent — do after the plumbing above is live.
 - [ ] Verify unique `<title>`/`<meta description>` per page (homepage and
       `/reviews` are fine already; just confirm after P0 changes).
 
-## P3 — Off-page / ongoing
+## P3 — Off-page / ongoing (2026-07-05: this is now the higher-leverage
+work — homepage is indexed on both Google and Bing, but a single
+homepage only really ranks for branded searches like "Ambrose Patterson
+book". Real backlinks raise the whole domain's authority far more than
+any further on-page tweak would.)
 
 - [ ] Check whether the reviews on `/reviews` are from real, published
       outlets — if so, get backlinks from the original articles (a link
       from e.g. a real Sydney Morning Herald piece is worth far more
       than any on-page fix above).
-- [ ] List the book on Goodreads / relevant book-retailer and library
-      catalogue pages, each linking back to ambrosepatterson.com.au.
+- [ ] **Get the book listed on directories/catalogues, each linking back
+      to ambrosepatterson.com.au** — prioritize these first:
+  - [ ] **Goodreads** — book page + author profile for Jane Alexander.
+  - [ ] **Trove** (National Library of Australia aggregator,
+        trove.nla.gov.au) — Australian-content discovery, strong
+        domestic authority.
+  - [ ] **DAAO** — Design and Art Australia Online (daao.org.au) —
+        directly relevant art-history directory; Patterson may already
+        have an entry worth linking/updating.
+  - [ ] **WorldCat** (worldcat.org) — library catalogue aggregator, picks
+        up ISBN 978-0-6467-3365-4 once cataloged by any member library.
+  - [ ] Australian book retailers — **Booktopia**, **Readings**,
+        **Dymocks** — product listing pages with a publisher/author link.
+  - [ ] **Amazon** book listing (author page linking out, if permitted).
+  - [ ] State/public library catalogues (e.g. **State Library of
+        Victoria**) — natural fit given the Melbourne launch.
+  - [ ] The public galleries/museums holding Patterson's work (the
+        homepage already says "represented in more than twenty public
+        galleries and museums") — a link from an artist bio page on any
+        of these is high-authority and highly relevant.
+  - [ ] **Wikipedia** — check if Ambrose Patterson has an existing
+        article; if so, the book is a citable secondary source (adds a
+        reference link, not a promotional link — follow Wikipedia's
+        conflict-of-interest/notability rules here).
 - [ ] Consider a Google Business Profile for the 15 Aug 2026 Melbourne
       launch event once it's public (currently correctly `noindex`'d —
       leave it that way until the invite embargo lifts).
 - [ ] Re-check Search Console weekly for coverage errors / manual
       actions once submitted.
+
+## P4 — More indexable content: game/interactive pages (blocked — pending specifics)
+
+Idea raised 2026-07-05: build small interactive/game pages (e.g. art
+quizzes) as additional indexable content while waiting on real reviews.
+**Blocked on**: what the actual game ideas are — need specifics before
+sketching routes/pages. Once known, the structure to use:
+
+- [ ] Treat the homepage as the pillar page (targets the branded query,
+      "Ambrose Patterson book"); each game targets its own distinct
+      long-tail query (e.g. "Fauvism quiz") — no keyword overlap, so
+      games don't compete with the homepage for the same searches.
+- [ ] Nav/homepage links out to each game; each game page links back to
+      the homepage/book with real anchor text — reinforces the homepage
+      as the hub (same pattern that produces sitelinks, see the
+      `#artist`/`#book`/`#author` JSON-LD note in P0).
+- [ ] Note: there's no actual mechanism to tell Google/Bing to "index
+      the core page first" — sitemap `priority` is essentially ignored
+      by both. Ranking priority comes from internal linking + backlinks,
+      not a config flag.
+- [ ] Real risk to watch: thin/low-effort game pages can drag down
+      Google's site-wide quality assessment. Only ship these if they're
+      genuinely good content (real text content server-rendered, not
+      client-only widgets with nothing for a crawler to read).
+- [ ] Each game page will need its own metadata (title/description),
+      and should be added to `src/app/sitemap.ts` once real (same
+      pattern as the homepage entry — see P0).
 
 ---
 
