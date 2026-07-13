@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/book/HeroSection";
 import { ArtistSection } from "@/components/book/ArtistSection";
 import { BookSection } from "@/components/book/BookSection";
 import { AuthorSection } from "@/components/book/AuthorSection";
+import { InterviewPlayer } from "@/components/book/InterviewPlayer";
 import { SiteFooter } from "@/components/book/SiteFooter";
 import { SectionHeader } from "@/components/book/SectionHeader";
 import { BookCover } from "@/components/book/BookCover";
@@ -312,6 +313,13 @@ export default function UIGallery() {
           description="Jane Alexander bio + pull quote"
           bg="bg-transparent">
           <AuthorSection />
+        </ComponentFrame>
+
+        <ComponentFrame
+          name="InterviewPlayer"
+          description="/press — YouTube embed (hidden until video ID is set) + chapters + clippable highlights"
+          bg="bg-transparent">
+          <InterviewPlayer />
         </ComponentFrame>
 
         <ComponentFrame

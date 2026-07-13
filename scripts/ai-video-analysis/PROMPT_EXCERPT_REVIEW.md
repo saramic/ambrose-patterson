@@ -29,7 +29,9 @@ Return **only** JSON, matching this shape exactly:
       "start": "mm:ss",
       "end": "mm:ss",
       "type": "quotable_moment | key_insight | strong_story | emotional_moment | strong_opening | strong_closing | visual_moment",
+      "speaker": "who is speaking during this moment",
       "transcript_excerpt": "the exact or near-exact words said, verbatim, for this moment",
+      "display_quote": "the same moment cleaned up for display as a pull-quote: remove filler words (um, uh), false starts, and stammered repeats, and lightly smooth grammar — but never change the meaning or add words that weren't said",
       "why_it_works": "why this moment is worth clipping out on its own — what makes it punchy, quotable, or self-contained",
       "suggested_use": "e.g. social clip, homepage pull-quote, testimonial snippet"
     }
