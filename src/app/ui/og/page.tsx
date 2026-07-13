@@ -26,7 +26,9 @@ function OGImagePreview({
   sizes?: string;
 }) {
   return (
-    <div className={`relative overflow-hidden ${className ?? ""}`} style={style}>
+    <div
+      className={`relative overflow-hidden ${className ?? ""}`}
+      style={style}>
       <Image
         src="/og-image.jpg"
         alt={META.imageAlt}
@@ -268,7 +270,8 @@ export default function OGPreview() {
             <code className="bg-muted px-1.5 py-0.5 rounded">layout.tsx</code>,
             reading{" "}
             <code className="bg-muted px-1.5 py-0.5 rounded">og-image.jpg</code>{" "}
-            from <code className="bg-muted px-1.5 py-0.5 rounded">/public</code>.
+            from <code className="bg-muted px-1.5 py-0.5 rounded">/public</code>
+            .
           </p>
         </section>
       </div>

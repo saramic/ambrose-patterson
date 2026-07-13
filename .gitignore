@@ -33,6 +33,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# one-off scripts: isolated deps + scratch data, never part of the app build
+scripts/*/node_modules
+scripts/*/output/
+scripts/*/tmp/
+
 # vercel
 .vercel
 

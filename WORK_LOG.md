@@ -60,7 +60,7 @@ This is the actual "webmaster tools" flow Google pointed you at.
       http/https in one go).
 - [x] **Submit the sitemap** (`/sitemap.xml`) in Search Console once P0
       is deployed.
-- [X] **Request indexing** for `/` manually via URL Inspection to speed
+- [x] **Request indexing** for `/` manually via URL Inspection to speed
       up first crawl rather than waiting. (`/reviews` once it has real
       content — see P2.)
 - [x] **Set the same property up in Bing Webmaster Tools** (free, 5
@@ -71,12 +71,15 @@ This is the actual "webmaster tools" flow Google pointed you at.
       `https://ambrosepatterson.com.au/548bc64a079548b5140935eeba0c9b8d.txt`
       once deployed — verified it serves correctly from a local prod
       build). To notify Bing/Yandex/Seznam after any content change:
-      ```
+
+      ```sh
       curl "https://api.indexnow.org/indexnow?url=https://ambrosepatterson.com.au/&key=548bc64a079548b5140935eeba0c9b8d&keyLocation=https://ambrosepatterson.com.au/548bc64a079548b5140935eeba0c9b8d.txt"
-      ```
+      ````
+
       A `200`/`202` response means it was accepted. Run this once right
       after deploying the key file, then again any time homepage content
       changes materially.
+
 - [ ] **Diagnosis, 2026-07-04**: Bing Webmaster Tools reported the
       homepage as "Discovered but not crawled" / "URL cannot appear on
       Bing", discovered 06 Feb 2026. Checked live: `200` for browser/
@@ -113,6 +116,7 @@ Higher-value, not urgent — do after the plumbing above is live.
       `/reviews` are fine already; just confirm after P0 changes).
 
 ## P3 — Off-page / ongoing (2026-07-05: this is now the higher-leverage
+
 work — homepage is indexed on both Google and Bing, but a single
 homepage only really ranks for branded searches like "Ambrose Patterson
 book". Real backlinks raise the whole domain's authority far more than
