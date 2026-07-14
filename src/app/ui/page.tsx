@@ -6,6 +6,7 @@ import { ArtistSection } from "@/components/book/ArtistSection";
 import { BookSection } from "@/components/book/BookSection";
 import { AuthorSection } from "@/components/book/AuthorSection";
 import { InterviewPlayer } from "@/components/book/InterviewPlayer";
+import { AroundTheWebSection } from "@/components/book/AroundTheWebSection";
 import { SiteFooter } from "@/components/book/SiteFooter";
 import { SectionHeader } from "@/components/book/SectionHeader";
 import { BookCover } from "@/components/book/BookCover";
@@ -320,6 +321,13 @@ export default function UIGallery() {
           description="/press — YouTube embed (hidden until video ID is set) + chapters + clippable highlights"
           bg="bg-transparent">
           <InterviewPlayer />
+        </ComponentFrame>
+
+        <ComponentFrame
+          name="AroundTheWebSection"
+          description="/press/around-the-web — resource directory grouped by category, sourced from scripts/search-engine"
+          bg="bg-transparent">
+          <AroundTheWebSection />
         </ComponentFrame>
 
         <ComponentFrame

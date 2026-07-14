@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteNav } from "@/components/book/SiteNav";
 import { SiteFooter } from "@/components/book/SiteFooter";
 import { SectionHeader } from "@/components/book/SectionHeader";
@@ -71,6 +72,11 @@ export default function InterviewPage() {
               subtitle={INTERVIEW_SUMMARY}
             />
             <InterviewPlayer />
+            <Link
+              href="/press/around-the-web"
+              className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors self-start">
+              Explore more of Patterson around the web →
+            </Link>
           </div>
         </section>
       </main>
