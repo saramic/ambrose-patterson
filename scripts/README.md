@@ -20,5 +20,7 @@ app itself — AI video review, site/content scraping for research, etc.
 
 - [`ai-video-analysis/`](ai-video-analysis/) — send an MP4 to Gemini to pull timestamped
   chapters and highlight-worthy excerpts.
+- [`search-engine/`](search-engine/) — research a topic via Gemini + Google Search
+  grounding, producing a categorized directory of pages/images/further reading.
 - `web-content-analysis/` — not built yet. For scraping other Ambrose Patterson sites
   to build an overview/comparison graph.

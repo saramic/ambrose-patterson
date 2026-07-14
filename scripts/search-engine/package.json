@@ -1,0 +1,13 @@
+{
+  "name": "search-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "insights": "node insights_for.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.4.5"
+  }
+}

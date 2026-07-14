@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # one-off scripts: isolated deps + scratch data, never part of the app build
 scripts/*/node_modules
