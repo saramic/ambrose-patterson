@@ -16,6 +16,12 @@ export interface ResourceCategory {
   entries: Resource[];
 }
 
+export interface HistoricalNote {
+  heading: string;
+  paragraphs: string[];
+  sources: { label: string; url: string }[];
+}
+
 export interface RelatedArtist {
   slug: string;
   name: string;
@@ -26,6 +32,8 @@ export interface RelatedArtist {
   categories: ResourceCategory[];
   /** Optional link to a dedicated on-site video page about this artist. */
   video?: { href: string; label: string };
+  /** Optional sourced context on a specific biographical detail, shown in a neutral (non-primary) card. */
+  historicalNote?: HistoricalNote;
 }
 
 export const relatedArtists: RelatedArtist[] = [
@@ -41,6 +49,27 @@ export const relatedArtists: RelatedArtist[] = [
       href: "/press/around-the-web/hugh-ramsay/video",
       label:
         "Watch: NGA curator Dr. Deborah Hart on Hugh Ramsay's short, brilliant life",
+    },
+    historicalNote: {
+      heading: "A note on his engagement",
+      paragraphs: [
+        "Around 1899, while still in Melbourne, Ramsay entered an unofficial engagement with Lischen Muller, a German student he had met that year. Born around 1885, she was about 14–15 when they became engaged, shortly before he sailed for Europe in September 1900. She sat for several of his works, including Consolation (1899–1901) and the 1904 portrait Lady with a Fan. Ramsay ended the roughly five-year engagement in August 1904 as his tuberculosis worsened — the National Portrait Gallery suggests he may have done so “perhaps to spare her further grief, or on medical advice.”",
+        "By the standards of the time this wasn't a legal transgression. Betrothal carried no minimum age — it was a social promise, not a registered legal act — and even marriage at that age would have been lawful: colonial Victoria inherited English common law's historic minimum marriageable age of 12 for girls and 14 for boys, a floor that stayed in practice until the Commonwealth's Marriage Act 1961 introduced real statutory minimums, later equalised to 18 for both sexes in 1991. Victoria's age of consent for sexual activity, by contrast, had already been raised to 16 around 1891 — though nothing in the historical record indicates the relationship was sexual.",
+      ],
+      sources: [
+        {
+          label: "Wunderkind Lost — National Portrait Gallery",
+          url: "https://www.portrait.gov.au/magazines/65/wunderkind-lost",
+        },
+        {
+          label: "Hugh Ramsay — Design and Art Australia Online",
+          url: "https://www.daao.org.au/bio/hugh-ramsay/biography/",
+        },
+        {
+          label: "Marriage in Australia — Wikipedia",
+          url: "https://en.wikipedia.org/wiki/Marriage_in_Australia",
+        },
+      ],
     },
     categories: [
       {

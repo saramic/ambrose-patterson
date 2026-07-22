@@ -79,6 +79,37 @@ export function RelatedArtistSection({ artist }: { artist: RelatedArtist }) {
           </div>
         </div>
       ))}
+
+      {artist.historicalNote && (
+        <div className="flex flex-col gap-3 max-w-2xl">
+          <h3 className="font-heading text-lg text-foreground">
+            {artist.historicalNote.heading}
+          </h3>
+          <Card className="border-border/60 bg-muted/20">
+            <CardContent className="flex flex-col gap-3">
+              {artist.historicalNote.paragraphs.map((paragraph, i) => (
+                <p
+                  key={i}
+                  className="font-sans text-sm leading-relaxed text-foreground/80">
+                  {paragraph}
+                </p>
+              ))}
+              <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 border-t border-border/60">
+                {artist.historicalNote.sources.map((source) => (
+                  <a
+                    key={source.url}
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-sans text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">
+                    {source.label}
+                  </a>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
