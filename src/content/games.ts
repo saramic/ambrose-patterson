@@ -48,6 +48,7 @@ export const games: GameEntry[] = [
     mood: "Relaxing",
     description:
       "A Patterson painting chopped into a grid of tiles, one removed. Slide pieces into place. Difficulty scales with grid size.",
+    href: "/games/sliding-jigsaw",
   },
   {
     slug: "paint-by-numbers",
