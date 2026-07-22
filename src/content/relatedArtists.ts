@@ -593,4 +593,346 @@ export const relatedArtists: RelatedArtist[] = [
       },
     ],
   },
+  {
+    slug: "iso-rae",
+    name: "Iso Rae",
+    dates: "1860–1940",
+    connectionToPatterson:
+      "Like Patterson, Rae trained at the National Gallery School in Melbourne before continuing her artistic development in France, joining the Étaples art colony in 1890 — part of the same wave of Australian expatriate painters who left Melbourne for France around the turn of the century and built careers exhibiting and painting abroad.",
+    overview:
+      "Isobel (Iso) Rae (1860–1940) was an Australian Impressionist and Post-Impressionist painter who spent most of her career in France as part of the Étaples art colony. She is particularly notable for being one of only two Australian women artists to document the First World War firsthand, producing hundreds of pastel drawings of the Étaples Army Base Camp. Her work is held in major institutions including the National Gallery of Victoria and the Australian War Memorial.",
+    categories: [
+      {
+        key: "biography_background",
+        label: "Biography & Background",
+        entries: [
+          {
+            title: "Iso Rae — Wikipedia",
+            url: "https://en.wikipedia.org/wiki/Iso_Rae",
+            summary:
+              "A comprehensive biographical overview of Rae's early life in Melbourne, her move to France, her involvement in the Étaples art colony, and her unofficial war art during World War I.",
+            hasImages: true,
+            imageNote: "Her painting 'Young Girl, Étaples' and archival material.",
+          },
+          {
+            title: "Iso Rae, the Unrecognised War Artist — Kathryn's history blog",
+            url: "http://www.kathrynshistoryblog.com/2021/03/iso-rae-unrecognised-war-artist.html",
+            summary:
+              "A historical blog post on Rae's time in Étaples during WWI, her decision to stay in France, and her 200 drawings documenting life in the military camps.",
+            hasImages: true,
+            imageNote: "A photograph of Iso Rae seated in a group.",
+          },
+        ],
+      },
+      {
+        key: "galleries_museums",
+        label: "Galleries & Museums",
+        entries: [
+          {
+            title: "Iso Rae — Young girl, Étaples (c. 1892) — NGV",
+            url: "https://www.ngv.vic.gov.au/explore/collection/work/144974/",
+            summary:
+              "The NGV's collection page for Rae's large-scale oil painting 'Young girl, Étaples', with artwork details, provenance, and context about her time in the French fishing village.",
+            hasImages: true,
+            imageNote: "High-resolution image of the painting.",
+          },
+          {
+            title: "Iso Rae — Australian War Memorial",
+            url: "https://www.awm.gov.au/collection/P10676602",
+            summary:
+              "The Australian War Memorial's overview of Rae's contributions as an unofficial war artist, and its collection of her pastel drawings of the Étaples army camp.",
+            hasImages: true,
+            imageNote: "Several pastel drawings from the WWI Étaples army camp.",
+          },
+        ],
+      },
+      {
+        key: "image_sources",
+        label: "Image Sources",
+        entries: [
+          {
+            title: "Category: Étaples art colony — Wikimedia Commons",
+            url: "https://commons.wikimedia.org/wiki/Category:%C3%89taples_art_colony",
+            summary:
+              "A Wikimedia Commons category of public-domain images from the Étaples art colony, including several works by Iso Rae such as 'Cinema Queue' and 'Les Rogations'.",
+            hasImages: true,
+            imageNote: "High-res images of paintings by artists in the Étaples colony.",
+          },
+        ],
+      },
+      {
+        key: "influences_related",
+        label: "Influences & Related",
+        entries: [
+          {
+            title: "Colonie artistique d'Étaples — Wikipédia",
+            url: "https://fr.wikipedia.org/wiki/Colonie_artistique_d%27%C3%89taples",
+            summary:
+              "The French Wikipedia page for the Étaples art colony, the international group of artists Rae joined in 1890, with context on the movement and its members.",
+            hasImages: true,
+            imageNote: "Paintings by artists of the colony.",
+          },
+          {
+            title: "Behind the lines — NGV",
+            url: "https://www.ngv.vic.gov.au/essay/behind-the-lines/",
+            summary:
+              "An NGV essay on the role of women artists during WWI, contextualizing Rae's work alongside other female artists who documented life behind the front lines.",
+            hasImages: true,
+            imageNote: "Rae's WWI pastel drawings, including 'German prisoners putting up tents'.",
+          },
+        ],
+      },
+      {
+        key: "further_reading",
+        label: "Further Reading",
+        entries: [
+          {
+            title: "Women Artists of WW1: Iso Rae — Josie Holford",
+            url: "https://www.josieholford.com/women-artists-of-ww1-iso-rae/",
+            summary:
+              "An article on the exclusion of women from Australia's official war artist appointments in 1918, focusing on Rae's unrecognized contributions.",
+            hasImages: true,
+            imageNote: "Reproductions of her wartime pastel sketches.",
+          },
+        ],
+      },
+      {
+        key: "news_press",
+        label: "News & Press",
+        entries: [
+          {
+            title: "Isobel (Iso) Rae — Gibson's Auctions",
+            url: "https://www.gibsonsauctions.com.au/isobel-iso-rae/",
+            summary:
+              "A 2022 article on the rising market and institutional interest in Rae, noting the NGV's record-breaking acquisition of her work.",
+            hasImages: true,
+            imageNote: "Images of 'Breton Family' and 'Young Girl, Étaples'.",
+          },
+          {
+            title:
+              "Exciting art changeovers in the First World War, Second World War and Korea galleries — Australian War Memorial",
+            url: "https://www.awm.gov.au/articles/blog/exciting-art-changeovers-in-the-galleries",
+            summary:
+              "A 2024 update from the Australian War Memorial on the installation of two of Rae's pastel drawings in their First World War Galleries.",
+            hasImages: true,
+            imageNote: "Images of the newly installed pastel drawings.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "john-longstaff",
+    name: "John Longstaff",
+    dates: "1861–1941",
+    connectionToPatterson:
+      "Like Patterson, Longstaff trained at the National Gallery School in Melbourne before continuing his studies in Paris, part of the same generation of Australian artists who moved between Melbourne and Europe around the turn of the century. Longstaff went on to become Australia's first knighted artist and a five-time Archibald Prize winner, a very different path from Patterson's move into art education in Seattle.",
+    overview:
+      "Sir John Campbell Longstaff (1861–1941) was a distinguished Australian painter renowned for his portraiture and his role as an official war artist during World War I. He trained at the Melbourne National Gallery School before continuing in Paris, went on to win the Archibald Prize five times, and was knighted in 1928.",
+    categories: [
+      {
+        key: "biography_background",
+        label: "Biography & Background",
+        entries: [
+          {
+            title: "John Longstaff — Wikipedia",
+            url: "https://en.wikipedia.org/wiki/John_Longstaff",
+            summary:
+              "A comprehensive biographical overview covering Longstaff's education at the Melbourne National Gallery School, his career as a portraitist and war artist, his five Archibald Prize wins, and his knighthood.",
+            hasImages: false,
+          },
+          {
+            title: "LONGSTAFF, Sir John Campbell (1861–1941) — The Geelong College",
+            url: "https://gnet.tgc.vic.edu.au/wiki/LONGSTAFF-Sir-John-Campbell-1861-1941",
+            summary:
+              "A biographical summary focusing on his time as an Official War Artist during World War I and his knighthood in 1928.",
+            hasImages: false,
+          },
+        ],
+      },
+      {
+        key: "galleries_museums",
+        label: "Galleries & Museums",
+        entries: [
+          {
+            title: "John Longstaff — Artists | NGV",
+            url: "https://www.ngv.vic.gov.au/explore/collection/artist/1960/",
+            summary:
+              "The National Gallery of Victoria's collection page for Longstaff, listing 24 of his works held by the institution, including 'Gippsland, Sunday night, February 20th, 1898'.",
+            hasImages: true,
+            imageNote: "24 paintings and sketches in the NGV collection.",
+          },
+          {
+            title: "John Longstaff — Australian War Memorial",
+            url: "https://www.awm.gov.au/collection/C176452",
+            summary:
+              "The Australian War Memorial's collection page on Longstaff's work as an official war artist attached to the Australian Imperial Forces in 1918.",
+            hasImages: true,
+            imageNote: "Archival records and his commissioned military portraits from World War I.",
+          },
+        ],
+      },
+      {
+        key: "image_sources",
+        label: "Image Sources",
+        entries: [
+          {
+            title: "John Longstaff — 71 Artworks at Auction — MutualArt",
+            url: "https://www.mutualart.com/Artist/John-Longstaff/50037EB6B43D814A",
+            summary:
+              "An auction database featuring over 70 artworks by Longstaff, including realized prices and exhibition history.",
+            hasImages: true,
+            imageNote: "Over 70 paintings and works on paper sold at auction.",
+          },
+        ],
+      },
+      {
+        key: "influences_related",
+        label: "Influences & Related",
+        entries: [
+          {
+            title: "Lady in grey, John Longstaff — NGV",
+            url: "https://www.ngv.vic.gov.au/explore/collection/work/5870/",
+            summary:
+              "An artwork detail page explaining the influence of James McNeill Whistler and European Japonisme on Longstaff's early Parisian work.",
+            hasImages: true,
+            imageNote: "The painting 'Lady in grey' and its original frame.",
+          },
+          {
+            title: "William Frederick (Will) Longstaff — Australian Dictionary of Biography",
+            url: "https://adb.anu.edu.au/biography/longstaff-william-frederick-will-7231",
+            summary:
+              "A biographical entry for Will Longstaff, John Longstaff's cousin and fellow official war artist.",
+            hasImages: false,
+          },
+        ],
+      },
+      {
+        key: "further_reading",
+        label: "Further Reading",
+        entries: [
+          {
+            title:
+              "Debonair Jack: A Biography of Sir John Longstaff, 1861–1941 — Prue Joske",
+            url: "https://books.google.com.au/books/about/Debonair_Jack.html?id=jF141zOM8OIC&redir_esc=y",
+            summary:
+              "Prue Joske's 1994 comprehensive biography, covering his journey from a storekeeper's son to Australia's first knighted artist.",
+            hasImages: false,
+          },
+        ],
+      },
+      {
+        key: "news_press",
+        label: "News & Press",
+        entries: [
+          {
+            title: "Sir John Campbell Longstaff — Obituaries Australia",
+            url: "https://oa.anu.edu.au/obituary/longstaff-sir-john-campbell-7230",
+            summary:
+              "A digitized 1941 obituary reflecting on Longstaff's death and legacy as the 'doyen of Australian artists'.",
+            hasImages: false,
+          },
+          {
+            title: "19 Jan 1929 — Archibald Prize won by John Longstaff — Trove",
+            url: "https://trove.nla.gov.au/newspaper/article/54249995",
+            summary:
+              "A historical news clipping from Trove announcing Longstaff's 1928 Archibald Prize win.",
+            hasImages: false,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bernard-hall",
+    name: "Bernard Hall",
+    dates: "1859–1935",
+    connectionToPatterson:
+      "Hall was Patterson's teacher at the National Gallery School in Melbourne, and as the school's longest-serving director he shaped an entire generation of Australian artists who went on to Paris — including Hugh Ramsay, John Longstaff, Iso Rae, and E. Phillips Fox. His strict academic training was the common starting point for the whole expatriate circle Patterson belonged to.",
+    overview:
+      "Lindsay Bernard Hall (1859–1935) was an English-born Australian artist, teacher, and the longest-serving director of the National Gallery of Victoria. A strict disciplinarian who championed academic painting, his own work frequently featured nudes, interiors, and still lifes, though his administrative legacy — including acting as the first buyer for the Felton Bequest — has often overshadowed his artistic output.",
+    categories: [
+      {
+        key: "biography_background",
+        label: "Biography & Background",
+        entries: [
+          {
+            title: "Lindsay Bernard Hall — Australian Dictionary of Biography",
+            url: "https://adb.anu.edu.au/biography/hall-lindsay-bernard-6528",
+            summary:
+              "A comprehensive biographical entry detailing Hall's early life, education in London and Munich, and his 43-year tenure as director of the National Gallery of Victoria.",
+            hasImages: false,
+          },
+          {
+            title: "Lindsay Bernard Hall — Wikipedia",
+            url: "https://en.wikipedia.org/wiki/Lindsay_Bernard_Hall",
+            summary:
+              "An overview of Hall's life, career, and legacy as an artist and gallery director in Australia.",
+            hasImages: true,
+            imageNote: "A portrait of Hall and examples of his paintings.",
+          },
+        ],
+      },
+      {
+        key: "galleries_museums",
+        label: "Galleries & Museums",
+        entries: [
+          {
+            title: "National Gallery of Victoria (NGV)",
+            url: "https://www.ngv.vic.gov.au/",
+            summary:
+              "The NGV holds a significant collection of Hall's work, including his symbolist painting 'Sleep' (c. 1906); Hall served as its director from 1892 to 1935, shaping its collection through the Felton Bequest.",
+            hasImages: false,
+          },
+          {
+            title: "QAGOMA Collection Online",
+            url: "https://collection.qagoma.qld.gov.au/",
+            summary:
+              "The Queensland Art Gallery holds notable works by Hall, including his unconventional 1922 Archibald Prize entry 'Lady with sponge'.",
+            hasImages: false,
+          },
+        ],
+      },
+      {
+        key: "image_sources",
+        label: "Image Sources",
+        entries: [
+          {
+            title: "Lindsay Bernard Hall — Art Renewal Center",
+            url: "https://www.artrenewal.org/artists/lindsay-bernard-hall/6468",
+            summary:
+              "A digital gallery of Hall's paintings, including 'Sleep', 'Processional', and 'Nude Reading at Studio Fire'.",
+            hasImages: true,
+            imageNote: "7 paintings showcasing his academic and symbolist styles.",
+          },
+        ],
+      },
+      {
+        key: "influences_related",
+        label: "Influences & Related",
+        entries: [
+          {
+            title: "Louis Frederick McCubbin — Australian Dictionary of Biography",
+            url: "https://adb.anu.edu.au/biography/mccubbin-louis-frederick-7329",
+            summary:
+              "Biography of Louis Frederick McCubbin, one of the many notable Australian artists who studied under Hall at the National Gallery School.",
+            hasImages: false,
+          },
+        ],
+      },
+      {
+        key: "further_reading",
+        label: "Further Reading",
+        entries: [
+          {
+            title: "L. Bernard Hall: The Man the Art World Forgot",
+            url: "https://www.tandfonline.com/doi/full/10.1080/14443058.2014.904727",
+            summary:
+              "An academic review in the Journal of Australian Studies discussing Gwen Rankin's definitive 2013 biography of Hall, exploring his dual role as artist and institutional director.",
+            hasImages: false,
+          },
+        ],
+      },
+    ],
+  },
 ];

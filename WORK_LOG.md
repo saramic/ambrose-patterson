@@ -208,10 +208,15 @@ explains the real connection to Patterson, rather than just a generic
       so the pages aren't orphaned, and added all four to
       `src/app/sitemap.ts`.
 - [ ] Run the IndexNow ping (see P1) for each new URL once deployed.
-- [ ] Consider more artists from the same Paris circle if these perform
-      well (candidates already researched: none yet beyond the four
-      above — see the "other painters" list from this session for
-      Iso Rae, John Longstaff, Bernard Hall as the next tier).
+- [x] Second tier shipped 2026-07-22: **Iso Rae**, **John Longstaff**,
+      **Bernard Hall**. Hall is framed differently from the others —
+      he was Patterson's *teacher* at the National Gallery School, not
+      a peer, and taught Ramsay/Longstaff/Rae/Fox too, so his page
+      leans on that as the connective thread. No code changes needed
+      beyond the new `relatedArtists.ts` entries — the `/press/around-the-web`
+      listing and `sitemap.ts` both derive from that array automatically.
+- [ ] Next candidates if this keeps performing: none identified yet —
+      revisit once there's ranking data on the current seven.
 
 ### Hugh Ramsay video page (2026-07-22)
 
