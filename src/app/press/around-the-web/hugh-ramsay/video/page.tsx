@@ -11,7 +11,7 @@ import {
 } from "@/content/hughRamsayVideo";
 
 const SITE_URL = "https://ambrosepatterson.com.au";
-const PAGE_TITLE = `${HUGH_RAMSAY_VIDEO_TITLE} — Hugh Ramsay`;
+const PAGE_TITLE = HUGH_RAMSAY_VIDEO_TITLE;
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

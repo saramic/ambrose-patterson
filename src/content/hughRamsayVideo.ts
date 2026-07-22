@@ -10,10 +10,10 @@ export const HUGH_RAMSAY_VIDEO_SOURCE = "National Gallery of Australia";
 export const HUGH_RAMSAY_VIDEO_SPEAKER =
   "Dr. Deborah Hart, Curator & Head of Australian Art, National Gallery of Australia";
 
-export const HUGH_RAMSAY_VIDEO_TITLE = "Hugh Ramsay: A Short, Brilliant Life";
+export const HUGH_RAMSAY_VIDEO_TITLE = "Hugh Ramsay: An Overview";
 
 export const HUGH_RAMSAY_VIDEO_SUMMARY =
-  "National Gallery of Australia curator Dr. Deborah Hart on Hugh Ramsay's early promise, his triumphant years in Paris, and the defiant burst of work — culminating in 'Two Girls in White' — that he produced after his tuberculosis diagnosis.";
+  "National Gallery of Australia curator Dr. Deborah Hart discusses Hugh Ramsay's early training, his years working in Paris, and the paintings — including 'Two Girls in White' — he completed after his tuberculosis diagnosis.";
 
 export interface VideoChapter {
   start: string;
@@ -28,49 +28,49 @@ export const hughRamsayVideoChapters: VideoChapter[] = [
     end: "00:16",
     title: "Introduction to Hugh Ramsay and the Exhibition",
     summary:
-      "An introduction to Hugh Ramsay, an often-overlooked but remarkable artist whose breadth of work the NGA's exhibition aims to bring to public attention.",
+      "An introduction to Hugh Ramsay and the National Gallery of Australia's exhibition of his work.",
   },
   {
     start: "00:16",
     end: "00:40",
-    title: "Early Artistic Talent and Prodigy",
+    title: "Early Training",
     summary:
-      "Ramsay's dedication to art began at a very young age — his earliest exhibited work was a kookaburra painting completed at 14, and he entered art school at just 16.",
+      "Ramsay began painting seriously as a teenager — his earliest exhibited work was a kookaburra painting completed at 14, and he entered art school at 16.",
   },
   {
     start: "00:40",
     end: "01:12",
-    title: "Paris, Inspiration, and Self-Portraits",
+    title: "Paris and Self-Portraits",
     summary:
-      "In 1901, Ramsay arrived in Paris — a dream come true. Inspired by the city's art scene and museums, he began painting numerous self-portraits, using himself as a ready model.",
+      "In 1901, Ramsay moved to Paris, where he painted numerous self-portraits, using himself as a model, while taking in the city's museums and art scene.",
   },
   {
     start: "01:12",
     end: "02:45",
-    title: "Self-Portraits and Salon Success",
+    title: "Self-Portraits and Salon Acceptance",
     summary:
-      "His self-portraits reveal an evolving style and playful emulation of masters like John Singer Sargent. Four of his works were accepted into the prestigious New Salon in Paris — a phenomenal early success for an Australian artist in his 20s.",
+      "His self-portraits show an evolving style, drawing on artists such as John Singer Sargent. Four of his works were accepted into the New Salon in Paris, an early success for an Australian artist in his 20s.",
   },
   {
     start: "02:45",
     end: "03:52",
     title: "Dame Nellie Melba and Child Portraits",
     summary:
-      "A pivotal moment: meeting Dame Nellie Melba, who commissioned him to paint her niece, Miss Nellie Patterson — one of his most celebrated child portraits.",
+      "Ramsay met Dame Nellie Melba, who commissioned him to paint her niece, Miss Nellie Patterson — one of his child portraits.",
   },
   {
     start: "03:52",
     end: "05:32",
-    title: "Defiance in Illness and the Masterpiece 'Two Girls in White'",
+    title: "Illness and Later Paintings",
     summary:
-      "Diagnosed with tuberculosis at the peak of his career, Ramsay defiantly kept painting — his largest work, 'The Equestrian Portrait', and his masterpiece 'Two Girls in White', a poignant homage to his sisters.",
+      "After being diagnosed with tuberculosis at the height of his career, Ramsay continued painting — including his largest work, 'The Equestrian Portrait', and 'Two Girls in White', a portrait of his sisters.",
   },
   {
     start: "05:32",
     end: "06:30",
-    title: "Legacy of a Brilliant Artist",
+    title: "His Legacy",
     summary:
-      "The curator reflects on working on Ramsay's exhibition, his dedication and true vision, and hopes his legacy is now fully appreciated.",
+      "The curator reflects on Ramsay's short career and his hope that Ramsay's work continues to be recognized.",
   },
 ];
 
