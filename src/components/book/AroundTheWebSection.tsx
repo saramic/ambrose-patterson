@@ -69,13 +69,16 @@ export function AroundTheWebSection() {
             Related Artists
           </h3>
           <p className="font-sans text-xs text-muted-foreground tracking-wide">
-            The Australian expatriate painters and circles Patterson's career
-            crossed paths with.
+            The Australian expatriate painters and circles Patterson&apos;s
+            career crossed paths with.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           {relatedArtists.map((artist) => (
-            <Link key={artist.slug} href={`/press/around-the-web/${artist.slug}`} className="group">
+            <Link
+              key={artist.slug}
+              href={`/press/around-the-web/${artist.slug}`}
+              className="group">
               <Card className="h-full border-border/60 bg-card transition-shadow group-hover:shadow-md">
                 <CardContent className="flex flex-col gap-2">
                   <div className="flex items-start justify-between gap-2">

@@ -24,6 +24,8 @@ export interface RelatedArtist {
   connectionToPatterson: string;
   overview: string;
   categories: ResourceCategory[];
+  /** Optional link to a dedicated on-site video page about this artist. */
+  video?: { href: string; label: string };
 }
 
 export const relatedArtists: RelatedArtist[] = [
@@ -35,6 +37,11 @@ export const relatedArtists: RelatedArtist[] = [
       "Ramsay and Patterson trained together under Bernard Hall at the National Gallery School in Melbourne before both left for Paris around the turn of the century. In 1901–02 Ramsay painted a full-length portrait of Patterson; the canvas was later damaged, and Patterson himself cropped it down to the fragment held today by the National Portrait Gallery. Ramsay died of tuberculosis in 1906, aged 28, cutting short one of the most promising careers of his generation.",
     overview:
       "Hugh Ramsay (1877–1906) was a highly gifted Australian artist whose promising career was cut short by tuberculosis at age 28. He is celebrated for tonally subtle portraiture — influenced by Velázquez, Whistler, and Sargent — and achieved early success when four paintings were accepted into the 1902 New Salon in Paris. His work is held in major Australian institutions today.",
+    video: {
+      href: "/press/around-the-web/hugh-ramsay/video",
+      label:
+        "Watch: NGA curator Dr. Deborah Hart on Hugh Ramsay's short, brilliant life",
+    },
     categories: [
       {
         key: "biography_background",
@@ -67,10 +74,12 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "The National Gallery of Victoria's collection page for Ramsay, listing 21 of his works held by the institution.",
             hasImages: true,
-            imageNote: "21 artworks in the NGV collection, including self-portraits and studies.",
+            imageNote:
+              "21 artworks in the NGV collection, including self-portraits and studies.",
           },
           {
-            title: "Hugh Ramsay Exhibition Tour — National Gallery of Australia",
+            title:
+              "Hugh Ramsay Exhibition Tour — National Gallery of Australia",
             url: "https://nga.gov.au/on-demand/hugh-ramsay-exhibition-tour/",
             summary:
               "The NGA's major retrospective of Ramsay, the first in over 25 years, curating paintings, drawings, sketchbooks, and letters from collections nationwide.",
@@ -88,15 +97,18 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A gallery page showcasing the artworks displayed in the NGA's comprehensive Hugh Ramsay retrospective.",
             hasImages: true,
-            imageNote: "High-resolution images of works from the NGA retrospective.",
+            imageNote:
+              "High-resolution images of works from the NGA retrospective.",
           },
           {
-            title: "The art and archive of Hugh Ramsay — National Gallery of Australia",
+            title:
+              "The art and archive of Hugh Ramsay — National Gallery of Australia",
             url: "https://nga.gov.au/stories-ideas/the-art-and-archive-of-hugh-ramsay/",
             summary:
               "An archival look at Ramsay's painting tools, photographs, letters, and sketchbooks.",
             hasImages: true,
-            imageNote: "His wooden paintbox, watercolour tins, brushes, and a self-portrait smoking in front of a piano.",
+            imageNote:
+              "His wooden paintbox, watercolour tins, brushes, and a self-portrait smoking in front of a piano.",
           },
         ],
       },
@@ -133,7 +145,8 @@ export const relatedArtists: RelatedArtist[] = [
             hasImages: false,
           },
           {
-            title: "Hugh Ramsay: a consideration of his life and work — Minerva Access",
+            title:
+              "Hugh Ramsay: a consideration of his life and work — Minerva Access",
             url: "https://minerva-access.unimelb.edu.au/handle/11343/37215",
             summary:
               "A University of Melbourne thesis offering a scholarly consideration of Ramsay's life, family background, and artistic output.",
@@ -159,7 +172,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A feature by the NGA's Head Curator of Australian Art drawing parallels between Ramsay and the poet John Keats, both dead of tuberculosis at a young age.",
             hasImages: true,
-            imageNote: "Ramsay's self-portraits and key paintings discussed in the article.",
+            imageNote:
+              "Ramsay's self-portraits and key paintings discussed in the article.",
           },
         ],
       },
@@ -215,7 +229,8 @@ export const relatedArtists: RelatedArtist[] = [
         label: "Image Sources",
         entries: [
           {
-            title: "Category: Paintings by George Washington Lambert — Wikipedia",
+            title:
+              "Category: Paintings by George Washington Lambert — Wikipedia",
             url: "https://en.wikipedia.org/wiki/Category:Paintings_by_George_Washington_Lambert",
             summary:
               "A hub listing articles on individual paintings by Lambert, with images and analysis across various periods of his career.",
@@ -304,7 +319,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "An overview of Bunny's life, education, and success at the Paris Salon, covering his transition from neoclassical and symbolist work to later landscapes.",
             hasImages: true,
-            imageNote: "A self-portrait and several of his most famous paintings.",
+            imageNote:
+              "A self-portrait and several of his most famous paintings.",
           },
         ],
       },
@@ -318,7 +334,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "The NGV's substantial Bunny collection, including his 'Madame Melba' portrait and numerous sketches.",
             hasImages: true,
-            imageNote: "Over 80 artworks including major paintings and preparatory sketches.",
+            imageNote:
+              "Over 80 artworks including major paintings and preparatory sketches.",
           },
           {
             title: "Rupert Bunny — National Gallery of Australia",
@@ -391,15 +408,18 @@ export const relatedArtists: RelatedArtist[] = [
         label: "News & Press",
         entries: [
           {
-            title: "The Cosmopolitans: In Gallery Two — National Portrait Gallery",
+            title:
+              "The Cosmopolitans: In Gallery Two — National Portrait Gallery",
             url: "https://www.portrait.gov.au/exhibitions/the-cosmopolitans-2023",
             summary:
               "A 2023–2024 exhibition featuring Bunny alongside his contemporaries, highlighting the generation of Australian artists who traveled to London and Paris around 1900.",
             hasImages: true,
-            imageNote: "Installation views and selected portraits from the exhibition.",
+            imageNote:
+              "Installation views and selected portraits from the exhibition.",
           },
           {
-            title: "Rupert Bunny Foundation Visual Arts Fellowship — City of Port Phillip",
+            title:
+              "Rupert Bunny Foundation Visual Arts Fellowship — City of Port Phillip",
             url: "https://www.portphillip.vic.gov.au/people-and-community/funds-grants-and-subsidies/rupert-bunny-foundation-visual-arts-fellowship",
             summary:
               "A contemporary visual arts fellowship established in 2005 using funds from the insurance of a destroyed Rupert Bunny painting.",
@@ -448,10 +468,12 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "The National Portrait Gallery's collection page for Fox, with a biographical summary of his time in France and England and his portraiture work.",
             hasImages: true,
-            imageNote: "Portraits by Fox held in the National Portrait Gallery collection.",
+            imageNote:
+              "Portraits by Fox held in the National Portrait Gallery collection.",
           },
           {
-            title: "Between the Bush and Boudoir — National Gallery of Australia",
+            title:
+              "Between the Bush and Boudoir — National Gallery of Australia",
             url: "https://nga.gov.au/exhibitions/between-the-bush-and-boudoir/",
             summary:
               "An overview of Fox's place among a new generation of Australian impressionists in the 1880s, blending European plein-air traditions with Australian subjects.",
@@ -469,10 +491,12 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A digital gallery of Fox's paintings, drawings, and oils, showcasing his mastery of light and color.",
             hasImages: true,
-            imageNote: "High-resolution images of 82 artworks spanning his career.",
+            imageNote:
+              "High-resolution images of 82 artworks spanning his career.",
           },
           {
-            title: "Emanuel Phillips Fox: A collection of 76 paintings (HD) — YouTube",
+            title:
+              "Emanuel Phillips Fox: A collection of 76 paintings (HD) — YouTube",
             url: "https://www.youtube.com/watch?v=TKlUlRkb6Us",
             summary:
               "A video compilation of 76 of Fox's paintings in high definition, with a biographical description covering his landscapes, portraits, and Edwardian scenes.",
@@ -526,7 +550,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A major retrospective of Ethel Carrick (Dec 2024 – Apr 2025) re-evaluating her career and output during and after her marriage to Fox.",
             hasImages: true,
-            imageNote: "Promotional images and selected artworks from the exhibition.",
+            imageNote:
+              "Promotional images and selected artworks from the exhibition.",
           },
           {
             title: "CAM celebrates painting prize — Midland Express",

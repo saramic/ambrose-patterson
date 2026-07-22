@@ -1,4 +1,5 @@
-import { ExternalLink, Image as ImageIcon } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Image as ImageIcon, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { RelatedArtist } from "@/content/relatedArtists";
@@ -20,6 +21,20 @@ export function RelatedArtistSection({ artist }: { artist: RelatedArtist }) {
             </p>
           </CardContent>
         </Card>
+        {artist.video && (
+          <Link href={artist.video.href} className="group max-w-2xl">
+            <Card className="border-border/60 bg-card transition-shadow group-hover:shadow-md">
+              <CardContent className="flex items-center gap-3">
+                <span className="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary shrink-0">
+                  <Play size={13} fill="currentColor" />
+                </span>
+                <span className="font-sans text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {artist.video.label}
+                </span>
+              </CardContent>
+            </Card>
+          </Link>
+        )}
       </div>
 
       {artist.categories.map((category) => (

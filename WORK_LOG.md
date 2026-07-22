@@ -213,6 +213,24 @@ explains the real connection to Patterson, rather than just a generic
       above — see the "other painters" list from this session for
       Iso Rae, John Longstaff, Bernard Hall as the next tier).
 
+### Hugh Ramsay video page (2026-07-22)
+
+Sourced from a real find: the NGA posted a reel of curator Dr. Deborah
+Hart discussing Hugh Ramsay
+(`https://www.facebook.com/reel/2408506749401178`), analyzed with
+`scripts/ai-video-analysis`
+
+- [x] New page `src/app/press/around-the-web/hugh-ramsay/video` — chapters
+      and quotable highlights from the video, with a "Watch the original
+      on Facebook" link out (no embedded iframe — Facebook's video plugin
+      doesn't reliably support Reels embeds, and every other external
+      resource on this site links out rather than embeds, so this matches
+      the established pattern instead of shipping something fragile).
+      Content lives in `src/content/hughRamsayVideo.ts`.
+- [x] Linked from the main Hugh Ramsay page
+      (`src/content/relatedArtists.ts` → `video` field, rendered by
+      `RelatedArtistSection`) and added to `sitemap.ts`.
+
 ---
 
 ## Notes
