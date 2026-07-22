@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { relatedArtists } from "@/content/relatedArtists";
 
 const SITE_URL = "https://ambrosepatterson.com.au";
 
@@ -26,5 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...relatedArtists.map((artist) => ({
+      url: `${SITE_URL}/press/around-the-web/${artist.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
   ];
 }

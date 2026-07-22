@@ -183,6 +183,36 @@ sketching routes/pages. Once known, the structure to use:
       and should be added to `src/app/sitemap.ts` once real (same
       pattern as the homepage entry — see P0).
 
+## P5 — Related-artist pages (long-tail name searches, 2026-07-22)
+
+Idea: capture searches for the Australian expat painters in Patterson's
+circle (e.g. "hugh ramsay") by giving each their own dedicated page that
+explains the real connection to Patterson, rather than just a generic
+"around the web" entry buried in his own page.
+
+- [x] Researched each artist with `scripts/search-engine/insights_for.ts`
+      (Gemini + Google Search grounding) — raw output in
+      `scripts/search-engine/output/<slug>.json`, hand-reviewed before
+      landing in code, same pattern as the original Patterson research.
+- [x] Added `src/content/relatedArtists.ts` — per-artist bio, a
+      `connectionToPatterson` blurb, and a resource directory (biography,
+      galleries/museums, image sources, influences, further reading,
+      news/press).
+- [x] New dynamic route `src/app/press/around-the-web/[artist]/page.tsx`
+      — dedicated title/description/canonical per artist (e.g. "Hugh
+      Ramsay and Ambrose Patterson"), `Person` JSON-LD, statically
+      generated for all four slugs.
+- [x] Shipped for: **Hugh Ramsay**, **George W. Lambert**, **Rupert
+      Bunny**, **E. Phillips Fox**.
+- [x] Linked from `/press/around-the-web` (new "Related Artists" section)
+      so the pages aren't orphaned, and added all four to
+      `src/app/sitemap.ts`.
+- [ ] Run the IndexNow ping (see P1) for each new URL once deployed.
+- [ ] Consider more artists from the same Paris circle if these perform
+      well (candidates already researched: none yet beyond the four
+      above — see the "other painters" list from this session for
+      Iso Rae, John Longstaff, Bernard Hall as the next tier).
+
 ---
 
 ## Notes
