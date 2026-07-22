@@ -156,12 +156,121 @@ any further on-page tweak would.)
 - [ ] Re-check Search Console weekly for coverage errors / manual
       actions once submitted.
 
-## P4 — More indexable content: game/interactive pages (blocked — pending specifics)
+## P4 — More indexable content: game/interactive pages (first one shipped, 2026-07-22)
 
 Idea raised 2026-07-05: build small interactive/game pages (e.g. art
 quizzes) as additional indexable content while waiting on real reviews.
-**Blocked on**: what the actual game ideas are — need specifics before
-sketching routes/pages. Once known, the structure to use:
+Unblocked 2026-07-22 with a concrete list of 10 ideas, tagged by mood
+(Relaxing / Educational / Competitive / Social), plus 4 more specific
+to Patterson. First one — **Paris to Seattle** — is now live.
+
+### Shipped: Paris to Seattle (2026-07-22)
+
+- [x] `/games` — the hub page all future games link from. Lists every
+      idea in the backlog below as a real, described card — "coming
+      soon" for the unbuilt ones, so the hub itself is never thin
+      content and doesn't need to change shape as more get built.
+      Data lives in `src/content/games.ts` (`games` array — set
+      `href` once a game has a real page, sitemap picks it up
+      automatically).
+- [x] `/games/paris-to-seattle` — the actual game: a stop-by-stop
+      journey (Melbourne → Paris → Australia → Hawaii/San Francisco →
+      Seattle), each stop using facts already published elsewhere on
+      the site (`ArtistSection` milestones, `content/interview.ts`,
+      `content/relatedArtists.ts`) rather than re-derived, so nothing
+      drifts out of sync. Cross-links into the Bernard Hall, Hugh
+      Ramsay, and George W. Lambert pages from P5, and back to `/press`
+      at the Seattle stop — real internal linking, not an orphan page.
+      Content in `src/content/parisToSeattleGame.ts`, rendered by
+      `src/components/book/JourneySection.tsx`.
+- [x] Linked from the bottom of `/press` ("Play: games & interactives
+      →") alongside the existing "around the web" link.
+- [x] Both routes added to `src/app/sitemap.ts`.
+- [x] Added an actual OpenStreetMap/Leaflet map above the stop list
+      (2026-07-22) — `leaflet` + `@types/leaflet` as deps,
+      `src/components/book/JourneyMap.tsx`, loaded via `next/dynamic`
+      with `ssr: false` from `JourneySection.tsx` (Leaflet touches
+      `window` at import time, so it can't run during SSG). The stop
+      text itself stays server-rendered regardless — the map is a
+      progressive enhancement on top of it, not a replacement, so the
+      crawlable-content point below still holds even though a mapping
+      dependency was added after all.
+  - Marker icons are served from `/public/leaflet/` (copied from
+    `node_modules/leaflet/dist/images/`), not imported directly —
+    Turbopack doesn't resolve leaflet's `dist/images/*.png` imports to
+    the `{src}` object Next's static-image handling normally produces,
+    which left `iconUrl`/`iconRetinaUrl`/`shadowUrl` undefined and threw
+    at runtime ("iconUrl not set in Icon options").
+  - Longitude is unwrapped stop-to-stop (`unwrapLongitudes` in
+    `JourneyMap.tsx`) so the Pacific crossing draws east through Hawaii
+    rather than west through the Atlantic — plain lat/lng has no
+    concept of "shorter direction around the globe."
+  - Each leg is drawn as a quadratic-bezier arc bowed to the left of
+    its own direction of travel (`curvedArc`), not a straight line —
+    reversing a leg's endpoints (the Paris → Australia return matches
+    Melbourne → Paris exactly) flips the bow to the other side, so
+    outbound and return no longer draw as one overlapping line.
+  - Verified with a Playwright driver script (no project run-skill
+    existed for this repo yet) — 5 markers, 4 curved polyline segments,
+    working popups, zero console errors.
+
+### Idea backlog (13 remaining, none built yet)
+
+1. **Sliding jigsaw** *(Relaxing)* — the painting chopped into a grid
+   of tiles, one removed. Slide pieces into place. Difficulty scales
+   by grid size (3×3 → 6×6).
+2. **Paint by numbers** *(Relaxing)* — simplified regions of the
+   painting numbered and colour-coded. Click a region, pick the
+   matching colour from a swatch, fill it in.
+3. **Spot the difference** *(Competitive)* — two versions of the
+   painting side by side, one subtly altered (extra fruit, missing
+   bottle, shifted flower). Find all 5 changes before time runs out.
+4. **Zoom & guess** *(Competitive)* — a heavily cropped detail fills
+   the screen and zooms out slowly. Guess the object before time
+   expires — fruit, vase, window panel, etc.
+5. **Colour match** *(Educational)* — an eyedropper samples a pixel
+   from the painting. Drag RGB / hue-saturation sliders to recreate
+   the exact colour. Score based on closeness.
+6. **Memory pairs** *(Relaxing)* — 12–16 face-down cards, each a
+   cropped region of the painting. Flip and match identical pairs.
+   Fewest flips wins.
+7. **Restoration studio** *(Relaxing)* — the painting shown with
+   random "damage" patches (greyed-out blobs). Brush over them to
+   reveal the colour underneath — satisfying reveal mechanic.
+8. **Art historian quiz** *(Educational)* — multiple-choice questions
+   about the painting (style, period, objects depicted, artist
+   biography). Hints reveal zoomed-in details. Builds art literacy.
+9. **Impressionist filter lab** *(Educational)* — sliders adjust
+   blur, saturation, colour temperature, and brushstroke strength on
+   a copy of the painting, to explain how Impressionist technique
+   works visually.
+10. **Caption battle** *(Social)* — players write a caption for the
+    painting; submissions shown anonymously, everyone votes, most
+    upvoted wins. Needs a group/multiplayer session, not just
+    solo/SSR content — different build shape from 1–9.
+
+Ideas worth adding, specific to Patterson rather than generic
+"a painting" games (better long-tail SEO targeting, and cross-links
+into the new related-artist pages from P5):
+
+11. **Life timeline sequencing** *(Educational)* — drag key events
+    (Melbourne → Paris → Salon d'Automne 1905 → Hawaii → Seattle → UW
+    School of Painting and Design founded) into correct chronological
+    order. Targets biography-shaped searches directly.
+12. **Spot the Fauve** *(Educational/Competitive)* — a lineup of
+    paintings from the 1905 Salon d'Automne "cage aux fauves" show
+    (Matisse, Derain, Vlaminck, Patterson); guess which is Patterson's.
+    Directly targets "Fauvism" search traffic, same angle as idea #9
+    on P4's original note.
+13. **Who painted whom?** *(Educational)* — match a portrait to its
+    subject/painter pair (Ramsay's portrait of Patterson, Lambert's
+    group self-portrait). Cross-promotes the P5 related-artist pages
+    (Hugh Ramsay, George W. Lambert) directly from a game page.
+
+~~14. Paris to Seattle map~~ — **shipped**, see above.
+
+Once ideas are prioritized, the structure to use for whichever ship
+first:
 
 - [ ] Treat the homepage as the pillar page (targets the branded query,
       "Ambrose Patterson book"); each game targets its own distinct

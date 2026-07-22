@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { relatedArtists } from "@/content/relatedArtists";
+import { games } from "@/content/games";
 
 const SITE_URL = "https://ambrosepatterson.com.au";
 
@@ -39,5 +40,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${SITE_URL}/games`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    // Only games with a real page (an `href`) belong in the sitemap —
+    // the rest are "coming soon" entries on /games with no route yet.
+    ...games
+      .filter((game) => game.href)
+      .map((game) => ({
+        url: `${SITE_URL}${game.href}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      })),
   ];
 }

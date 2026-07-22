@@ -72,11 +72,18 @@ export default function InterviewPage() {
               subtitle={INTERVIEW_SUMMARY}
             />
             <InterviewPlayer />
-            <Link
-              href="/press/around-the-web"
-              className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors self-start">
-              Explore more of Patterson around the web →
-            </Link>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/press/around-the-web"
+                className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors self-start">
+                Explore more of Patterson around the web →
+              </Link>
+              <Link
+                href="/games"
+                className="font-sans text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors self-start">
+                Play: games & interactives →
+              </Link>
+            </div>
           </div>
         </section>
       </main>
