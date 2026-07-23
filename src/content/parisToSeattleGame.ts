@@ -57,8 +57,6 @@ export const parisToSeattleStops: JourneyStop[] = [
     years: "1916–1966",
     coords: [47.6062, -122.3321],
     body: "In Seattle, Patterson became the Pacific Northwest's first modernist link to Europe. He was seldom predictable and perpetually curious — trying murals, Cubism, and Abstraction — and in his last years returned full circle to Impressionism, producing light-filled studio interiors and still lifes. He helped establish the University of Washington's School of Painting and Design, and remained in Seattle until his death in 1966.",
-    relatedLinks: [
-      { label: "Read the full story →", href: "/press" },
-    ],
+    relatedLinks: [{ label: "Read the full story →", href: "/press" }],
   },
 ];

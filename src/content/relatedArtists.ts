@@ -612,10 +612,12 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A comprehensive biographical overview of Rae's early life in Melbourne, her move to France, her involvement in the Étaples art colony, and her unofficial war art during World War I.",
             hasImages: true,
-            imageNote: "Her painting 'Young Girl, Étaples' and archival material.",
+            imageNote:
+              "Her painting 'Young Girl, Étaples' and archival material.",
           },
           {
-            title: "Iso Rae, the Unrecognised War Artist — Kathryn's history blog",
+            title:
+              "Iso Rae, the Unrecognised War Artist — Kathryn's history blog",
             url: "http://www.kathrynshistoryblog.com/2021/03/iso-rae-unrecognised-war-artist.html",
             summary:
               "A historical blog post on Rae's time in Étaples during WWI, her decision to stay in France, and her 200 drawings documenting life in the military camps.",
@@ -642,7 +644,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "The Australian War Memorial's overview of Rae's contributions as an unofficial war artist, and its collection of her pastel drawings of the Étaples army camp.",
             hasImages: true,
-            imageNote: "Several pastel drawings from the WWI Étaples army camp.",
+            imageNote:
+              "Several pastel drawings from the WWI Étaples army camp.",
           },
         ],
       },
@@ -656,7 +659,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A Wikimedia Commons category of public-domain images from the Étaples art colony, including several works by Iso Rae such as 'Cinema Queue' and 'Les Rogations'.",
             hasImages: true,
-            imageNote: "High-res images of paintings by artists in the Étaples colony.",
+            imageNote:
+              "High-res images of paintings by artists in the Étaples colony.",
           },
         ],
       },
@@ -678,7 +682,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "An NGV essay on the role of women artists during WWI, contextualizing Rae's work alongside other female artists who documented life behind the front lines.",
             hasImages: true,
-            imageNote: "Rae's WWI pastel drawings, including 'German prisoners putting up tents'.",
+            imageNote:
+              "Rae's WWI pastel drawings, including 'German prisoners putting up tents'.",
           },
         ],
       },
@@ -742,7 +747,8 @@ export const relatedArtists: RelatedArtist[] = [
             hasImages: false,
           },
           {
-            title: "LONGSTAFF, Sir John Campbell (1861–1941) — The Geelong College",
+            title:
+              "LONGSTAFF, Sir John Campbell (1861–1941) — The Geelong College",
             url: "https://gnet.tgc.vic.edu.au/wiki/LONGSTAFF-Sir-John-Campbell-1861-1941",
             summary:
               "A biographical summary focusing on his time as an Official War Artist during World War I and his knighthood in 1928.",
@@ -768,7 +774,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "The Australian War Memorial's collection page on Longstaff's work as an official war artist attached to the Australian Imperial Forces in 1918.",
             hasImages: true,
-            imageNote: "Archival records and his commissioned military portraits from World War I.",
+            imageNote:
+              "Archival records and his commissioned military portraits from World War I.",
           },
         ],
       },
@@ -799,7 +806,8 @@ export const relatedArtists: RelatedArtist[] = [
             imageNote: "The painting 'Lady in grey' and its original frame.",
           },
           {
-            title: "William Frederick (Will) Longstaff — Australian Dictionary of Biography",
+            title:
+              "William Frederick (Will) Longstaff — Australian Dictionary of Biography",
             url: "https://adb.anu.edu.au/biography/longstaff-william-frederick-will-7231",
             summary:
               "A biographical entry for Will Longstaff, John Longstaff's cousin and fellow official war artist.",
@@ -833,7 +841,8 @@ export const relatedArtists: RelatedArtist[] = [
             hasImages: false,
           },
           {
-            title: "19 Jan 1929 — Archibald Prize won by John Longstaff — Trove",
+            title:
+              "19 Jan 1929 — Archibald Prize won by John Longstaff — Trove",
             url: "https://trove.nla.gov.au/newspaper/article/54249995",
             summary:
               "A historical news clipping from Trove announcing Longstaff's 1928 Archibald Prize win.",
@@ -903,7 +912,8 @@ export const relatedArtists: RelatedArtist[] = [
             summary:
               "A digital gallery of Hall's paintings, including 'Sleep', 'Processional', and 'Nude Reading at Studio Fire'.",
             hasImages: true,
-            imageNote: "7 paintings showcasing his academic and symbolist styles.",
+            imageNote:
+              "7 paintings showcasing his academic and symbolist styles.",
           },
         ],
       },
@@ -912,7 +922,8 @@ export const relatedArtists: RelatedArtist[] = [
         label: "Influences & Related",
         entries: [
           {
-            title: "Louis Frederick McCubbin — Australian Dictionary of Biography",
+            title:
+              "Louis Frederick McCubbin — Australian Dictionary of Biography",
             url: "https://adb.anu.edu.au/biography/mccubbin-louis-frederick-7329",
             summary:
               "Biography of Louis Frederick McCubbin, one of the many notable Australian artists who studied under Hall at the National Gallery School.",

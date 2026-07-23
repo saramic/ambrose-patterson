@@ -69,7 +69,7 @@ export const games: GameEntry[] = [
     title: "Restoration Studio",
     mood: "Relaxing",
     description:
-      "A painting shown with patches of \"damage.\" Brush over them to reveal the real colour underneath.",
+      'A painting shown with patches of "damage." Brush over them to reveal the real colour underneath.',
   },
   {
     slug: "spot-the-difference",
@@ -77,6 +77,7 @@ export const games: GameEntry[] = [
     mood: "Competitive",
     description:
       "Two versions of a painting side by side, one subtly altered. Find all 5 changes before time runs out.",
+    href: "/games/spot-the-difference",
   },
   {
     slug: "zoom-and-guess",

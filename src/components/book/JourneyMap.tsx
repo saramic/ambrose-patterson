@@ -90,9 +90,7 @@ export function JourneyMap() {
       maxZoom: 18,
     }).addTo(map);
 
-    const rawCoords = parisToSeattleStops.map(
-      (stop) => stop.coords as LatLng,
-    );
+    const rawCoords = parisToSeattleStops.map((stop) => stop.coords as LatLng);
     const unwrapped = unwrapLongitudes(rawCoords);
 
     parisToSeattleStops.forEach((stop, i) => {
