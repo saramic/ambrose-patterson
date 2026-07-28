@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "./SectionHeader";
 
 const specs = [
-  { value: "240", label: "Pages" },
   { value: "100+", label: "Illustrations" },
   { value: "18", label: "Chapters" },
   { value: "100k+", label: "Words" },
@@ -28,7 +27,7 @@ export function BookSection() {
         />
 
         {/* Stat bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {specs.map(({ value, label }) => (
             <Card
               key={label}
@@ -48,12 +47,20 @@ export function BookSection() {
         {/* Description + credits */}
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <p className="font-sans text-sm leading-[1.85] text-foreground/80">
-            Represented in more than twenty public galleries and museums around
-            the world, Patterson has never been the subject of a comprehensive
-            reference — until now. With unfettered access to family archives and
-            thousands of primary sources, this scholarly publication draws
-            extensively upon myriad institutional archives. A must-have for
-            collectors, researchers and critics.
+            A handsome, meticulously researched, scholarly tome, Ambrose
+            Patterson: His Life &amp; Art is a must have for collectors,
+            researchers, art historians and critics. Hard-cover, on a
+            coffee-table scale, its 240 pages are richly illustrated with more
+            than one hundred photographs, paintings and prints including
+            double page spreads of several major paintings by the artist.
+            Comprising more than 100,000 words presented chronologically in
+            eighteen chapters and detailed appendices, it draws extensively
+            upon myriad primary sources and family and institutional
+            archives. A ripping good read, this important publication
+            spotlights not only Patterson&rsquo;s immersion in key artistic
+            coteries in Paris, Brussels, Melbourne and Seattle but also
+            seminal epochs in modern art history in the early and
+            mid-twentieth century.
           </p>
           <div className="flex flex-col gap-3 bg-muted/40 rounded-sm p-6 border border-border/50">
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-muted-foreground mb-1">

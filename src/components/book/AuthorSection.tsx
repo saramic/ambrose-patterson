@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { SectionHeader } from "./SectionHeader";
+import janeAlexanderImage from "@/assets/images/jane-alexander.jpg";
 
 export function AuthorSection() {
   return (
@@ -6,20 +8,18 @@ export function AuthorSection() {
       <div className="max-w-5xl mx-auto px-6 py-20 md:py-24 flex flex-col gap-14">
         <SectionHeader label="About" title="The Author" />
         <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start max-w-4xl mx-auto w-full">
-          {/* Author portrait placeholder */}
+          {/* Author portrait */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div
-              className="rounded-sm w-40 h-48 flex items-end justify-center overflow-hidden"
-              style={{
-                background:
-                  "linear-gradient(170deg, oklch(0.783 0.067 110.7 / 0.3) 0%, oklch(0.78 0.11 80 / 0.25) 100%)",
-                border: "1px solid oklch(0.87 0.012 85)",
-              }}>
-              <div className="w-full bg-sage-tint-strong py-3 px-4 border-t border-border/40">
-                <p className="font-heading text-sm text-center text-foreground/60 italic">
-                  Jane Alexander
-                </p>
-              </div>
+              className="rounded-sm w-40 overflow-hidden bg-white"
+              style={{ border: "1px solid oklch(0.87 0.012 85)" }}>
+              <Image
+                src={janeAlexanderImage}
+                alt="Jane Alexander"
+                placeholder="blur"
+                sizes="160px"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
             <div className="text-center md:text-left">
               <p className="font-heading text-base">Jane Alexander</p>

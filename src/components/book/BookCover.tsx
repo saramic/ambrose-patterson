@@ -20,37 +20,14 @@ export function BookCover({ className }: { className?: string }) {
     <div
       className={className}
       style={{
-        display: "flex",
-        width: "280px",
+        position: "relative",
+        width: "248px",
+        aspectRatio: "25.5 / 32.5",
         boxShadow: "8px 8px 32px oklch(0.16 0.018 55 / 0.35)",
         borderRadius: "2px",
         overflow: "hidden",
         flexShrink: 0,
       }}>
-      {/* Spine */}
-      <div
-        style={{
-          width: "32px",
-          background: "oklch(0.665 0.178 20.1)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
-        }}>
-        <span
-          style={{
-            color: "white",
-            fontSize: "9px",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            fontFamily: "var(--font-heading), serif",
-            writingMode: "vertical-rl",
-            transform: "rotate(180deg)",
-            whiteSpace: "nowrap",
-          }}>
-          Ambrose Patterson
-        </span>
-      </div>
       {/* Front cover */}
       <Dialog
         onOpenChange={(open) => {
@@ -59,9 +36,9 @@ export function BookCover({ className }: { className?: string }) {
         <DialogTrigger
           aria-label="View full cover image"
           style={{
-            position: "relative",
+            position: "absolute",
+            inset: 0,
             display: "block",
-            flex: 1,
             padding: 0,
             border: "none",
             background: "none",
@@ -71,8 +48,9 @@ export function BookCover({ className }: { className?: string }) {
             src={coverImage}
             alt="Ambrose Patterson: His Life & Art — book cover"
             placeholder="blur"
+            fill
             sizes="248px"
-            style={{ width: "100%", height: "auto", display: "block" }}
+            style={{ objectFit: "cover" }}
           />
           {/* ACVA logo */}
           <div
