@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { SectionHeader } from "./SectionHeader";
-import janeAlexanderImage from "@/assets/images/jane-alexander.jpg";
+import janeAlexanderImage from "@/assets/images/jane-alexander-sage.jpg";
 
 export function AuthorSection() {
   return (
@@ -11,13 +11,13 @@ export function AuthorSection() {
           {/* Author portrait */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div
-              className="rounded-sm w-40 overflow-hidden bg-white"
+              className="rounded-sm w-full max-w-80 overflow-hidden bg-white"
               style={{ border: "1px solid oklch(0.87 0.012 85)" }}>
               <Image
                 src={janeAlexanderImage}
                 alt="Jane Alexander"
                 placeholder="blur"
-                sizes="160px"
+                sizes="320px"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>

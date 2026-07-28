@@ -51,16 +51,15 @@ export function BookSection() {
             Patterson: His Life &amp; Art is a must have for collectors,
             researchers, art historians and critics. Hard-cover, on a
             coffee-table scale, its 240 pages are richly illustrated with more
-            than one hundred photographs, paintings and prints including
-            double page spreads of several major paintings by the artist.
-            Comprising more than 100,000 words presented chronologically in
-            eighteen chapters and detailed appendices, it draws extensively
-            upon myriad primary sources and family and institutional
-            archives. A ripping good read, this important publication
-            spotlights not only Patterson&rsquo;s immersion in key artistic
-            coteries in Paris, Brussels, Melbourne and Seattle but also
-            seminal epochs in modern art history in the early and
-            mid-twentieth century.
+            than one hundred photographs, paintings and prints including double
+            page spreads of several major paintings by the artist. Comprising
+            more than 100,000 words presented chronologically in eighteen
+            chapters and detailed appendices, it draws extensively upon myriad
+            primary sources and family and institutional archives. A ripping
+            good read, this important publication spotlights not only
+            Patterson&rsquo;s immersion in key artistic coteries in Paris,
+            Brussels, Melbourne and Seattle but also seminal epochs in modern
+            art history in the early and mid-twentieth century.
           </p>
           <div className="flex flex-col gap-3 bg-muted/40 rounded-sm p-6 border border-border/50">
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-muted-foreground mb-1">
