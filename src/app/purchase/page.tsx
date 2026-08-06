@@ -7,8 +7,7 @@ import { Separator } from "@/components/ui/separator";
 
 const SITE_URL = "https://ambrosepatterson.com.au";
 
-const TITLE =
-  "Purchase — Ambrose Patterson: His Life & Art by Jane Alexander";
+const TITLE = "Purchase — Ambrose Patterson: His Life & Art by Jane Alexander";
 const DESCRIPTION =
   "Buy Ambrose Patterson: His Life & Art by Jane Alexander direct from ACVA or through Douglas Stewart Fine Books.";
 
