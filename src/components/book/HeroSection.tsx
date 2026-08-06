@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { BookCover } from "./BookCover";
 
@@ -43,6 +44,14 @@ export function HeroSection() {
               })}>
               About the book
             </a>
+            <Link
+              href="/purchase"
+              className={buttonVariants({
+                size: "lg",
+                className: "font-sans tracking-wider uppercase text-xs px-8",
+              })}>
+              Purchase the book
+            </Link>
           </div>
           <p className="font-sans text-xs text-muted-foreground/60 tracking-wide">
             By Jane Alexander · ISBN 978-0-6467-3365-4

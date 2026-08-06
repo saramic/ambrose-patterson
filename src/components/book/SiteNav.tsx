@@ -6,7 +6,8 @@ const links = [
   { label: "The Artist", href: "/#artist" },
   { label: "The Book", href: "/#book" },
   { label: "The Author", href: "/#author" },
-  { label: "In the Press", href: "/press" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Purchase", href: "/purchase" },
 ];
 
 export function SiteNav() {
