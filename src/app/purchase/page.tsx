@@ -7,21 +7,31 @@ import { Separator } from "@/components/ui/separator";
 
 const SITE_URL = "https://ambrosepatterson.com.au";
 
-const TITLE = "Purchase — Ambrose Patterson: His Life & Art by Jane Alexander";
-const DESCRIPTION =
-  "Buy Ambrose Patterson: His Life & Art by Jane Alexander direct from ACVA or through Douglas Stewart Fine Books.";
+// Book launch — Monday, 17 August 2026 (Australia/Sydney, AEST).
+const DOUGLAS_STEWART_LAUNCH = new Date("2026-08-17T00:00:00+10:00");
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: { canonical: "/purchase" },
-  openGraph: {
-    type: "website",
-    url: `${SITE_URL}/purchase`,
+export const revalidate = 3600;
+
+const TITLE = "Purchase — Ambrose Patterson: His Life & Art by Jane Alexander";
+
+export function generateMetadata(): Metadata {
+  const description =
+    new Date() >= DOUGLAS_STEWART_LAUNCH
+      ? "Buy Ambrose Patterson: His Life & Art by Jane Alexander direct from ACVA or through Douglas Stewart Fine Books."
+      : "Buy Ambrose Patterson: His Life & Art by Jane Alexander direct from ACVA.";
+
+  return {
     title: TITLE,
-    description: DESCRIPTION,
-  },
-};
+    description,
+    alternates: { canonical: "/purchase" },
+    openGraph: {
+      type: "website",
+      url: `${SITE_URL}/purchase`,
+      title: TITLE,
+      description,
+    },
+  };
+}
 
 const acvaOptions = [
   {
@@ -47,6 +57,8 @@ const acvaOptions = [
 ];
 
 export default function PurchasePage() {
+  const isDouglasStewartLive = new Date() >= DOUGLAS_STEWART_LAUNCH;
+
   return (
     <div className="min-h-screen flex flex-col">
       <SiteNav />
@@ -114,62 +126,66 @@ export default function PurchasePage() {
               </div>
             </div>
 
-            <Separator className="opacity-40" />
+            {isDouglasStewartLive && (
+              <>
+                <Separator className="opacity-40" />
 
-            {/* Douglas Stewart Fine Books */}
-            <div className="flex flex-col gap-8">
-              <div className="max-w-3xl w-full mx-auto flex flex-col gap-4 bg-muted/40 rounded-sm p-8 border border-border/50">
-                <h3 className="font-heading text-2xl text-foreground">
-                  Douglas Stewart Fine Books
-                </h3>
-                <address className="font-sans text-sm text-foreground/80 leading-relaxed not-italic">
-                  720 High Street
-                  <br />
-                  Armadale, Victoria 3143
-                  <br />
-                  Australia
-                </address>
-                <div className="flex flex-col gap-1 text-sm font-sans">
-                  <p>
-                    <span className="text-muted-foreground">Telephone</span>{" "}
+                {/* Douglas Stewart Fine Books */}
+                <div className="flex flex-col gap-8">
+                  <div className="max-w-3xl w-full mx-auto flex flex-col gap-4 bg-muted/40 rounded-sm p-8 border border-border/50">
+                    <h3 className="font-heading text-2xl text-foreground">
+                      Douglas Stewart Fine Books
+                    </h3>
+                    <address className="font-sans text-sm text-foreground/80 leading-relaxed not-italic">
+                      720 High Street
+                      <br />
+                      Armadale, Victoria 3143
+                      <br />
+                      Australia
+                    </address>
+                    <div className="flex flex-col gap-1 text-sm font-sans">
+                      <p>
+                        <span className="text-muted-foreground">Telephone</span>{" "}
+                        <a
+                          href="tel:+61390660200"
+                          className="text-foreground hover:text-primary transition-colors">
+                          +61 (0) 3 9066 0200
+                        </a>
+                      </p>
+                      <p>
+                        <span className="text-muted-foreground">Email</span>{" "}
+                        <a
+                          href="mailto:info@DouglasStewart.com.au"
+                          className="text-foreground hover:text-primary transition-colors">
+                          info@DouglasStewart.com.au
+                        </a>
+                      </p>
+                      <p>
+                        <span className="text-muted-foreground">Website</span>{" "}
+                        <a
+                          href="https://douglasstewart.com.au"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground hover:text-primary transition-colors">
+                          www.DouglasStewart.com.au
+                        </a>
+                      </p>
+                    </div>
                     <a
-                      href="tel:+61390660200"
-                      className="text-foreground hover:text-primary transition-colors">
-                      +61 (0) 3 9066 0200
-                    </a>
-                  </p>
-                  <p>
-                    <span className="text-muted-foreground">Email</span>{" "}
-                    <a
-                      href="mailto:info@DouglasStewart.com.au"
-                      className="text-foreground hover:text-primary transition-colors">
-                      info@DouglasStewart.com.au
-                    </a>
-                  </p>
-                  <p>
-                    <span className="text-muted-foreground">Website</span>{" "}
-                    <a
-                      href="https://douglasstewart.com.au"
+                      href="https://douglasstewart.com.au/product/ambrose-patterson-his-life-art-signed-copy/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors">
-                      www.DouglasStewart.com.au
+                      className={buttonVariants({
+                        size: "lg",
+                        className:
+                          "font-sans tracking-wider uppercase text-xs w-full justify-center",
+                      })}>
+                      View Signed Copy on Douglas Stewart Fine Books
                     </a>
-                  </p>
+                  </div>
                 </div>
-                <a
-                  href="https://douglasstewart.com.au/product/ambrose-patterson-his-life-art-signed-copy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={buttonVariants({
-                    size: "lg",
-                    className:
-                      "font-sans tracking-wider uppercase text-xs w-full justify-center",
-                  })}>
-                  View Signed Copy on Douglas Stewart Fine Books
-                </a>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </section>
       </main>

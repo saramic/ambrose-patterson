@@ -14,7 +14,6 @@ const AGED = "oklch(0.91 0.026 86)"; // slightly darker for boxes
 const INK = "oklch(0.09 0.01 50)"; // near-black ink
 const SPINE_RED = "oklch(0.665 0.178 20.1)";
 const GOLD = "oklch(0.66 0.10 82)";
-const CREAM = "oklch(0.97 0.012 88)";
 
 function Stars({ n = 5, size = "1em" }: { n?: number; size?: string }) {
   return (
