@@ -68,7 +68,11 @@ export default function PurchasePage() {
             <SectionHeader
               label="Get Your Copy"
               title="Purchase the Book"
-              subtitle="Ambrose Patterson: His Life & Art by Jane Alexander — order direct from ACVA or through Douglas Stewart Fine Books."
+              subtitle={
+                isDouglasStewartLive
+                  ? "Ambrose Patterson: His Life & Art by Jane Alexander — order direct from ACVA or through Douglas Stewart Fine Books."
+                  : "Ambrose Patterson: His Life & Art by Jane Alexander — order direct from ACVA."
+              }
             />
 
             {/* ACVA Direct */}
