@@ -22,5 +22,9 @@ app itself — AI video review, site/content scraping for research, etc.
   chapters and highlight-worthy excerpts.
 - [`search-engine/`](search-engine/) — research a topic via Gemini + Google Search
   grounding, producing a categorized directory of pages/images/further reading.
+- [`opening-event/`](opening-event/) — upload opening-night photos/videos to S3 and
+  publish the JSON manifest the `/opening-event` page reads.
+- [`slideshow/`](slideshow/) — offline HTML slideshow viewer for the AMP book's
+  landscape/portrait image decks.
 - `web-content-analysis/` — not built yet. For scraping other Ambrose Patterson sites
   to build an overview/comparison graph.

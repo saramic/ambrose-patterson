@@ -1,0 +1,11 @@
+[tasks.upload]
+description = "Upload a folder of opening-event photos/videos to S3 (generates video posters too)"
+run = ["./sync.sh upload {{arg(name=\"dir\")}}"]
+
+[tasks.manifest]
+description = "Rebuild and publish opening-event/manifest.json from what's currently in the bucket"
+run = ["./sync.sh manifest"]
+
+[tasks.sync]
+description = "Upload a folder of photos/videos AND publish the updated manifest.json in one step"
+run = ["./sync.sh sync {{arg(name=\"dir\")}}"]

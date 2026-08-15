@@ -162,3 +162,24 @@
     text-size-adjust: auto;
   }
 }
+
+/* Opening-event photo wall: per-card rotation is set via inline custom
+   properties (computed per item id), consumed here so hover/focus can
+   cleanly override just the angle without fighting inline style specificity. */
+@layer components {
+  .polaroid-card {
+    rotate: var(--polaroid-rotate, 0deg);
+    transition:
+      rotate 300ms ease,
+      translate 300ms ease,
+      box-shadow 300ms ease;
+  }
+  .polaroid-card:hover,
+  .polaroid-card:focus-visible {
+    rotate: 0deg;
+    translate: 0 -0.35rem;
+  }
+  .polaroid-tape {
+    rotate: var(--tape-rotate, 0deg);
+  }
+}
