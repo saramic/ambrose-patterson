@@ -7,8 +7,10 @@
 #   ./sync.sh sync <local-dir>     # upload then manifest, in one go
 #
 # Photos (jpg/jpeg/png/heic/heif — any case) are converted to JPEG and written
-# as two sizes: a small "thumb" for the photo-wall grid, and a resolution-capped
-# "full" for the lightbox/slideshow. Neither ever upscales a smaller original.
+# as three copies: a small "thumb" for the photo-wall grid, a resolution-capped
+# "full" for the lightbox/slideshow, and a full-quality "original" (same pixel
+# dimensions as the source, just normalized to JPEG) for the download button.
+# Thumb/full never upscale a smaller original.
 #
 # Env overrides: BUCKET, REGION, PREFIX, PUBLIC_BASE_URL, AWS_PROFILE,
 #                FULL_MAX_DIM, THUMB_MAX_DIM
@@ -46,15 +48,17 @@ cmd_upload() {
   shopt -s nullglob nocaseglob
 
   for f in "$dir"/*.jpg "$dir"/*.jpeg "$dir"/*.png "$dir"/*.heic "$dir"/*.heif; do
-    local name base full thumb
+    local name base full thumb original
     name=$(basename "$f")
     base="${name%.*}"
-    echo "photo: $name -> ${base}.jpg (full + thumb)"
+    echo "photo: $name -> ${base}.jpg (full + thumb + original)"
 
     full=$(mktemp -t "${base}-full").jpg
     thumb=$(mktemp -t "${base}-thumb").jpg
+    original=$(mktemp -t "${base}-original").jpg
     resize_to_fit "$f" "$full" "$FULL_MAX_DIM"
     resize_to_fit "$f" "$thumb" "$THUMB_MAX_DIM"
+    sips -s format jpeg "$f" --out "$original" >/dev/null
 
     aws s3 cp "$full" "s3://$BUCKET/$PREFIX/photos/${base}.jpg" \
       --region "$REGION" \
@@ -62,7 +66,13 @@ cmd_upload() {
     aws s3 cp "$thumb" "s3://$BUCKET/$PREFIX/thumbs/${base}.jpg" \
       --region "$REGION" \
       --cache-control "public, max-age=31536000, immutable"
-    rm -f "$full" "$thumb"
+    # Content-Disposition here (not on photos/thumbs) so this copy always
+    # downloads-to-disk instead of opening inline when linked from the page.
+    aws s3 cp "$original" "s3://$BUCKET/$PREFIX/originals/${base}.jpg" \
+      --region "$REGION" \
+      --cache-control "public, max-age=31536000, immutable" \
+      --content-disposition "attachment; filename=\"${base}.jpg\""
+    rm -f "$full" "$thumb" "$original"
   done
 
   for f in "$dir"/*.mp4 "$dir"/*.mov; do
@@ -98,32 +108,40 @@ cmd_manifest() {
     --query "Contents[].Key" --output json > "$tmp/thumbs.json"
 
   aws s3api list-objects-v2 \
+    --bucket "$BUCKET" --prefix "$PREFIX/originals/" --region "$REGION" \
+    --query "Contents[].Key" --output json > "$tmp/originals.json"
+
+  aws s3api list-objects-v2 \
     --bucket "$BUCKET" --prefix "$PREFIX/videos/" --region "$REGION" \
     --query "Contents[].Key" --output json > "$tmp/videos.json"
 
   jq -n \
     --slurpfile photoKeys "$tmp/photos.json" \
     --slurpfile thumbKeys "$tmp/thumbs.json" \
+    --slurpfile originalKeys "$tmp/originals.json" \
     --slurpfile videoKeys "$tmp/videos.json" \
     --arg baseUrl "$BASE_URL" \
     --arg date "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
     '
     def idOf: split("/")[-1] | sub("\\.[^.]+$"; "");
+    def byId(keys): (keys // []) | map(select(. != null)) | map({(idOf): .}) | add // {};
     def photoItems:
       ($photoKeys[0] // []) | map(select(. != null)) as $photos
-      | ($thumbKeys[0] // []) | map(select(. != null)) as $thumbs
-      | ($thumbs | map({(idOf): .}) | add // {}) as $thumbById
+      | byId($thumbKeys[0]) as $thumbById
+      | byId($originalKeys[0]) as $originalById
       | $photos
       | sort
-      | map({
-          id: idOf,
-          type: "image",
-          src: ($baseUrl + "/" + .),
-          thumb: (
-            ($thumbById[idOf]) as $t
-            | if $t then ($baseUrl + "/" + $t) else ($baseUrl + "/" + .) end
-          )
-        });
+      | map(
+          . as $key
+          | idOf as $id
+          | {
+              id: $id,
+              type: "image",
+              src: ($baseUrl + "/" + $key),
+              thumb: (if $thumbById[$id] then ($baseUrl + "/" + $thumbById[$id]) else ($baseUrl + "/" + $key) end),
+              original: (if $originalById[$id] then ($baseUrl + "/" + $originalById[$id]) else ($baseUrl + "/" + $key) end)
+            }
+        );
     def videoItems:
       ($videoKeys[0] // [])
       | map(select(. != null and (endswith("-poster.jpg") | not)))
@@ -132,7 +150,8 @@ cmd_manifest() {
           id: idOf,
           type: "video",
           src: ($baseUrl + "/" + .),
-          poster: ($baseUrl + "/" + (. | sub("\\.[^.]+$"; "-poster.jpg")))
+          poster: ($baseUrl + "/" + (. | sub("\\.[^.]+$"; "-poster.jpg"))),
+          original: ($baseUrl + "/" + .)
         });
     { event: "Ambrose Patterson Exhibition Opening", updatedAt: $date, items: (photoItems + videoItems) }
     ' > "$tmp/manifest.json"

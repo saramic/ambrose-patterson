@@ -4,6 +4,7 @@ export type MediaItem = {
   src: string;
   thumb?: string;
   poster?: string;
+  original?: string;
 };
 
 export type Manifest = {

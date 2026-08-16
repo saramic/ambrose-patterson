@@ -5,6 +5,7 @@ import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
+  DownloadIcon,
   PauseIcon,
   PlayIcon,
   XIcon,
@@ -256,6 +257,15 @@ function Lightbox({
                 )}
                 {autoplay ? "Pause" : "Slideshow"}
               </button>
+              {item.original && (
+                <a
+                  href={item.original}
+                  download
+                  className="flex items-center gap-1.5 transition-colors hover:text-white">
+                  <DownloadIcon className="h-4 w-4" />
+                  Original
+                </a>
+              )}
               <DialogPrimitive.Close
                 aria-label="Close"
                 className="flex items-center gap-1.5 transition-colors hover:text-white">
