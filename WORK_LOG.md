@@ -1,5 +1,10 @@
 # SEO Work Log — ambrosepatterson.com.au
 
+
+TODO
+images on  https://www.invaluable.com/artist/patterson-ambrose-mccarthy-bm0tojaape/sold-at-auction-prices/?srsltid=AfmBOooAC6DU9O1cXx6TR9LxQ2jah0un6MWLXCCztKQpyendHkUcxyKN
+eg https://www.invaluable.com/auction-lot/ambrose-patterson-hawaii-twelve-woodcuts-signed-102-c-23440acafc
+
 Started 2026-07-04. Site is Next.js (App Router) on Netlify. Live domain
 is `https://ambrosepatterson.com.au` — confirmed no analytics/GSC wiring
 exists yet, which is why Google is pointing you at Search Console.
