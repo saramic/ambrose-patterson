@@ -119,7 +119,9 @@ function PolaroidCard({
   const tapeRotate = tapeRotationFor(item.id);
   const tapeSide = tapeSideFor(item.id);
   const thumbSrc =
-    item.type === "video" ? (item.poster ?? item.src) : (item.thumb ?? item.src);
+    item.type === "video"
+      ? (item.poster ?? item.src)
+      : (item.thumb ?? item.src);
 
   return (
     <button
@@ -148,7 +150,10 @@ function PolaroidCard({
         {item.type === "video" && (
           <span className="absolute inset-0 flex items-center justify-center bg-black/15 transition-colors group-hover:bg-black/5">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/55 text-white">
-              <PlayIcon className="h-4 w-4 translate-x-[1px]" fill="currentColor" />
+              <PlayIcon
+                className="h-4 w-4 translate-x-[1px]"
+                fill="currentColor"
+              />
             </span>
           </span>
         )}
@@ -292,8 +297,8 @@ export function PhotoWall() {
           Opening Night
         </h1>
         <p className="text-sm text-muted-foreground">
-          Photos &amp; video from the exhibition opening — tap any photo to
-          view it full-screen or start a slideshow.
+          Photos &amp; video from the exhibition opening — tap any photo to view
+          it full-screen or start a slideshow.
         </p>
         {updatedAt && (
           <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground/70">
@@ -313,8 +318,8 @@ export function PhotoWall() {
 
       {items && items.length === 0 && (
         <p className="text-center text-sm text-muted-foreground">
-          Photos will start appearing here once the event gets underway —
-          check back soon.
+          Photos will start appearing here once the event gets underway — check
+          back soon.
         </p>
       )}
 

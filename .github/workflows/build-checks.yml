@@ -16,9 +16,9 @@ jobs:
     #   MISE_DEBUG: 1
     #   MISE_TRACE: 1
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
         with:
           install: true
           cache: true

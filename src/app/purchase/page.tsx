@@ -29,7 +29,6 @@ export function generateMetadata(): Metadata {
 }
 
 export default function PurchasePage() {
-
   return (
     <div className="min-h-screen flex flex-col">
       <SiteNav />
@@ -132,23 +131,23 @@ export default function PurchasePage() {
                   Australia
                 </address>
                 <div className="flex flex-col gap-1 text-sm font-sans">
-                    <p>
-                      <span className="text-muted-foreground">Phone</span>{" "}
-                      <a
-                        href="tel:+61393476633"
-                        className="text-foreground hover:text-primary transition-colors">
-                        (03) 9347 6633
-                      </a>
-                    </p>
-                    <p>
-                      <span className="text-muted-foreground">Email</span>{" "}
-                      <a
-                        href="mailto:carlton@readings.com.au"
-                        className="text-foreground hover:text-primary transition-colors">
-                        carlton@readings.com.au
-                      </a>
-                    </p>
-                  </div>
+                  <p>
+                    <span className="text-muted-foreground">Phone</span>{" "}
+                    <a
+                      href="tel:+61393476633"
+                      className="text-foreground hover:text-primary transition-colors">
+                      (03) 9347 6633
+                    </a>
+                  </p>
+                  <p>
+                    <span className="text-muted-foreground">Email</span>{" "}
+                    <a
+                      href="mailto:carlton@readings.com.au"
+                      className="text-foreground hover:text-primary transition-colors">
+                      carlton@readings.com.au
+                    </a>
+                  </p>
+                </div>
                 <a
                   href="https://www.readings.com.au/search/results?query=ambrose+patterson"
                   target="_blank"
