@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { PhotoWall } from "@/components/opening-event/PhotoWall";
 
 export const metadata: Metadata = {
-  title: "Opening Night",
+  title: "Book Launch Opening Night",
   robots: { index: false, follow: false },
 };
 
@@ -15,11 +15,11 @@ export default function OpeningEventPage() {
         <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold tracking-widest text-primary uppercase">
-              Opening Night
+              Book Launch
             </span>
             <Separator orientation="vertical" className="h-4 opacity-40" />
             <span className="text-xs text-muted-foreground">
-              Photos &amp; video from the exhibition opening
+              15 August 2026 · Victorian Artists Society
             </span>
           </div>
           <Link

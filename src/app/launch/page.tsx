@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { AcvaLogo } from "@/components/book/AcvaLogo";
 import { LaunchCountdown } from "@/components/book/LaunchCountdown";
 
@@ -46,6 +47,8 @@ function VLine({ color = DIM }: { color?: string }) {
 }
 
 export default function LaunchPage() {
+  redirect("/opening-event");
+
   return (
     <div
       style={{
@@ -451,11 +454,14 @@ export default function LaunchPage() {
           </div>
         </section>
 
-        {/* ── BACK LINK ───────────────────────────────────────── */}
+        {/* ── NAVIGATION LINKS ────────────────────────────────── */}
         <div
           style={{
             textAlign: "center",
             paddingBottom: "clamp(40px, 6vw, 64px)",
+            display: "flex",
+            justifyContent: "center",
+            gap: "24px",
           }}>
           <Link
             href="/"
@@ -467,6 +473,17 @@ export default function LaunchPage() {
               textDecoration: "none",
             }}>
             ← ambrosepatterson.com
+          </Link>
+          <Link
+            href="/opening-event"
+            style={{
+              fontSize: "9px",
+              letterSpacing: "0.28em",
+              textTransform: "uppercase",
+              color: DIM,
+              textDecoration: "none",
+            }}>
+            Photo Gallery →
           </Link>
         </div>
       </div>

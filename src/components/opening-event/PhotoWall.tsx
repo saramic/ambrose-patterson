@@ -71,7 +71,6 @@ function tapeSideFor(id: string): "left" | "center" | "right" {
 
 function useManifest() {
   const [items, setItems] = useState<MediaItem[] | null>(null);
-  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -84,7 +83,6 @@ function useManifest() {
         const data = await res.json();
         if (cancelled) return;
         setItems(Array.isArray(data.items) ? data.items : []);
-        setUpdatedAt(data.updatedAt ?? null);
         setError(null);
       } catch {
         if (!cancelled) {
@@ -101,7 +99,7 @@ function useManifest() {
     };
   }, []);
 
-  return { items, updatedAt, error };
+  return { items, error };
 }
 
 function PolaroidCard({
@@ -122,13 +120,18 @@ function PolaroidCard({
     item.type === "video"
       ? (item.poster ?? item.src)
       : (item.thumb ?? item.src);
+  const isHighlight = [0, 6, 29, 30].includes(index);
 
   return (
     <button
       type="button"
       onClick={onOpen}
       style={{ "--polaroid-rotate": `${rotate}deg` } as React.CSSProperties}
-      className="polaroid-card group relative z-0 -mt-14 block bg-white p-3 pb-9 text-left shadow-[0_6px_16px_-4px_rgba(40,25,10,0.35)] hover:z-20 hover:shadow-[0_16px_30px_-8px_rgba(40,25,10,0.45)] focus-visible:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:-mt-20">
+      className={cn(
+        "polaroid-card group relative z-0 -mt-14 block bg-white p-3 pb-9 text-left shadow-[0_6px_16px_-4px_rgba(40,25,10,0.35)] hover:z-20 hover:shadow-[0_16px_30px_-8px_rgba(40,25,10,0.45)] focus-visible:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:-mt-20",
+        isHighlight && "col-span-2 md:col-span-2",
+      )}
+      aria-label={isHighlight ? "Highlight photo" : undefined}>
       <span
         aria-hidden
         style={{ "--tape-rotate": `${tapeRotate}deg` } as React.CSSProperties}
@@ -139,7 +142,11 @@ function PolaroidCard({
           tapeSide === "right" && "right-5",
         )}
       />
-      <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted">
+      <div
+        className={cn(
+          "relative aspect-[4/5] w-full overflow-hidden bg-muted",
+          isHighlight && "aspect-[16/10] md:aspect-[3/2]",
+        )}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={thumbSrc}
@@ -286,7 +293,8 @@ function Lightbox({
 }
 
 export function PhotoWall() {
-  const { items, updatedAt, error } = useManifest();
+  const { items, error } = useManifest();
+  const visibleItems = items?.slice(2);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const columns = useColumns();
 
@@ -294,18 +302,15 @@ export function PhotoWall() {
     <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
       <header className="flex flex-col gap-2 text-center">
         <h1 className="font-heading text-3xl text-foreground sm:text-4xl">
-          Opening Night
+          Book Launch Opening Night
         </h1>
         <p className="text-sm text-muted-foreground">
-          Photos &amp; video from the exhibition opening — tap any photo to view
-          it full-screen or start a slideshow.
+          Victorian Artists Society · 15 August 2026 · 5:00 pm
         </p>
-        {updatedAt && (
-          <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground/70">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-secondary" />
-            Live — updated {new Date(updatedAt).toLocaleTimeString()}
-          </p>
-        )}
+        <p className="text-sm text-muted-foreground">
+          Photos &amp; video from the book launch — tap any photo to view it
+          full-screen or start a slideshow.
+        </p>
       </header>
 
       {error && <p className="text-center text-sm text-destructive">{error}</p>}
@@ -316,16 +321,16 @@ export function PhotoWall() {
         </p>
       )}
 
-      {items && items.length === 0 && (
+      {visibleItems && visibleItems.length === 0 && (
         <p className="text-center text-sm text-muted-foreground">
           Photos will start appearing here once the event gets underway — check
           back soon.
         </p>
       )}
 
-      {items && items.length > 0 && (
+      {visibleItems && visibleItems.length > 0 && (
         <div className="grid grid-cols-2 gap-x-4 pt-16 sm:grid-cols-3 sm:gap-x-6 sm:pt-24 md:grid-cols-4">
-          {items.map((item, i) => (
+          {visibleItems.map((item, i) => (
             <PolaroidCard
               key={item.id}
               item={item}
@@ -337,9 +342,9 @@ export function PhotoWall() {
         </div>
       )}
 
-      {items && activeIndex !== null && (
+      {visibleItems && activeIndex !== null && (
         <Lightbox
-          items={items}
+          items={visibleItems}
           index={activeIndex}
           onIndexChange={setActiveIndex}
           onClose={() => setActiveIndex(null)}

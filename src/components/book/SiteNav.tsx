@@ -8,6 +8,7 @@ const links = [
   { label: "The Author", href: "/#author" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Purchase", href: "/purchase" },
+  { label: "Book Launch", href: "/opening-event" },
 ];
 
 export function SiteNav() {
